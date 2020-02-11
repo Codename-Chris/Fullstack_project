@@ -35,4 +35,5 @@ class User < ApplicationRecord
     self.save
     self.session_token
   end
+end
 
