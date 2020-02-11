@@ -19,7 +19,7 @@ class Api::SessionsController < ApplicationController
             logout
             render :show
         else
-            render json: ['Nobdy signed in'], status 404
+            render json: ['Nobdy signed in'], status: 404
         end
     end
 end
