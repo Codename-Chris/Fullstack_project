@@ -1,0 +1,169 @@
+.all-login-form {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 40px 15%;
+}
+
+.login-form-container {
+    float: left;
+    display: flex;
+    width: 405px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 375px;
+}
+
+.login-redirect {
+    font-weight: 800;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.session-header {
+    // word-wrap: break-word !important;
+    // word-break: break-word !important;
+    // overflow-wrap: break-word !important;
+    font-weight: bold;
+    margin-bottom: 6px;
+    // font-size: 21px;
+    line-height: 1.28571em;
+    color: #d32323;
+    text-align: center;
+}
+
+.login-form-box {
+    width: 100%;
+    text-align: center;
+    color: #252430;
+    margin-bottom: 20px;
+    display: flex;
+    width: 605px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 120px;
+}
+
+.login-pic-outter-div {
+    float: left;
+    padding: 0 15px;
+    min-height: 1px;    
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.login-pic-div {
+    margin-top: 117px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+.login-pic {
+    // vertical-align: middle;
+    position: absolute;
+    right: 14%;
+    top: 27%;
+}
+
+.session-submit {    
+    width: 320px;
+    height: 43px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: red;
+    border: 1px solid red;
+    cursor: pointer;
+    border-radius: 3px;
+    color: #FFFF;
+    font-size: 15px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bolder;
+} 
+
+fieldset {
+    margin: 0 30px;
+    border: none;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid transparent;
+    text-align: center;
+    width: 320px;
+    // background-color: blue;
+}
+
+.leg-or {
+    padding: 0 15px;
+    margin: 0 auto;
+    color: #666666;
+    // background-color: orange;
+}
+
+.login-input {
+    // display: flex;
+    // justify-content: space-around;
+    // width: 300px;
+    // padding: 15px 0;
+    width: 320px;
+    height: 43px;
+    margin-top: 10px;
+    // text-align: center;
+    // background-color: #252430;
+    border: 1px solid #252430;
+    cursor: pointer;
+    border-radius: 3px;
+    color: black;
+    font-size: 15px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    // font-weight: bolder;
+    /* background-color: ; */
+}
+
+.demo-button {
+    width: 320px;
+    padding: 8px 19px 9px;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 3px;
+    color: #ffff;
+    font-weight: bold;
+    font-size: 13.5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.login-forgot {
+    text-align: center;
+    margin-right: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.footer-cont {
+    display: flex;
+    background-color: #f5f5f5;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    font-size: 16px;
+    border-top: 1px solid #ccc;
+    
+}
+
+.footer {
+    display: flex;
+    width: 200%;
+    background-color: #f5f5f5;
+    justify-content: space-around;
+    flex-direction: row; 
+}
+
+.session-tos {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5em; 
+}
+ 

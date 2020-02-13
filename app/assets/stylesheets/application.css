@@ -14,79 +14,42 @@
  *= require_self
  */
 
-html {
+/* html {
     background-image: url(https://media.giphy.com/media/BH730puCydbVe/giphy.gif);
+} */
+
+html { 
+   background-image: url(https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_large_assets/fa674c810afa/assets/img/home/hero_photos/sL6pI2T8M-jSGiZzeq6Wxg.jpg);
+    padding-top: 30px;
+    height: 570px;
+    background-color: #333;
+    background-size: cover;
+    background-position: 50%;
+    /* min-width: 1020px; */
 }
 
-/* html { 
-   background-image: url(https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_large_assets/fa674c810afa/assets/img/home/hero_photos/sL6pI2T8M-jSGiZzeq6Wxg.jpg);
-} */
- header {
+
+header {
+    display: block;
     padding: 12px 0;
     background: #d32323;
     position: relative;
     z-index: 1012!important;
- }
+    border: 0;
+    font-size: 100%;
+    font: inherit;  
+}
 
- h1 {
-     color: whitesmoke;
-     font-family: Arial, Helvetica, sans-serif;
-     text-align: center;
-     text-decoration: none;
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
- }
-
- .login-form {
-     text-align: left;
- }
-
- .login-form-container {
-     background-color: white;
- }
- .login-gif {
-    float: right;
- }
-
- .session-submit {
-     color: #fff;
-    background: #d32323;
-    border: 1px solid #d32323;
-    background-image: none;
-    background-repeat: no-repeat;
-    transition: all 0.6s;
-    background-position: 50% 50%;
-    background-size: 15000px 15000px;
-    cursor: pointer;
-    font-weight: bold;
+h1 {
+    color: whitesmoke;
+    /* font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; */
     text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0;
-    width: 15%;
-    box-sizing: border-box;
- }
-
- fieldset {
-     display: block;
-    margin-inline-start: 2px;
-    margin-inline-end: 2px;
-    padding-block-start: 0.35em;
-    padding-inline-start: 0.75em;
-    padding-inline-end: 0.75em;
-    padding-block-end: 0.625em;
-    min-inline-size: min-content;
-    width: 10%;
- }
-
- .leg-or {
-     font-size: 1em;
-    padding: 0 15px;
-    margin: 0 auto;
-    color: #666;
- }
-
- legend {
-     display: block;
-    padding-inline-start: 2px;
-    padding-inline-end: 2px;
- }
+    font-size: 45px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: black;
+    text-shadow: 3px 3px 0 #FFF, -3px 3px 0 #FFF, 3px -3px 0 #FFF, -3px -3px 0 #FFF;
+    margin: 0px 0px 0px 30px;
+    
+}
