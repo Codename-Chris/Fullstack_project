@@ -4,21 +4,24 @@ import {
     Switch,
     Link,
 } from 'react-router-dom';
+import Footer from './footer/footer'
 
 import SignUpContainer from './session/signup_container';
 import LogInContainer from './session/login_container';
-import {AuthRoute} from '../util/route_util';
+import SplashPage from '../splash_page/splash_page';
+import { AuthRoute } from '../util/route_util';
 
 const App = () => (
     <div>
-        <header>
+        {/* <header>
             <Link to="/" className="header-link"><h1>Celp</h1></Link>
-        </header>
+        </header> */}
         <Switch>
             <AuthRoute exact path="/login" component={LogInContainer} />
             <AuthRoute exact path="/signup" component={SignUpContainer} />
-            <Route exact path="/"/>
+            <Route exact path="/" component={SplashPage}/>
         </Switch>
+        <Footer />
     </div>
 );
 

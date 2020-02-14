@@ -21,6 +21,7 @@
     font-size: 14px;
     margin-top: 0;
     margin-bottom: 15px;
+    text-align: right;
 }
 
 .session-header {
@@ -135,11 +136,15 @@ fieldset {
 }
 
 .login-forgot {
-    text-align: center;
-    margin-right: 10%;
+    // text-align: right !important;
+    // margin-right: 10%;
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 15px;
+}
+
+.login-form {
+    text-align: right;
 }
 
 .footer-cont {
@@ -149,21 +154,40 @@ fieldset {
     align-items: center;
     flex-direction: row;
     font-size: 16px;
-    border-top: 1px solid #ccc;
-    
-}
-
-.footer {
-    display: flex;
-    width: 200%;
-    background-color: #f5f5f5;
-    justify-content: space-around;
-    flex-direction: row; 
+    border-top: 1px solid #ccc; 
 }
 
 .session-tos {
     text-align: center;
     font-size: 13px;
     line-height: 1.5em; 
+}
+
+.header-link {
+    display: block;
+    padding: 12px 0;
+    background: #d32323;
+    position: relative;
+    z-index: 1012!important;
+    border: 0;
+    font-size: 100%;
+    font: inherit;  
+    text-decoration: none;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+h1 {
+    color: whitesmoke;
+    /* font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; */
+    text-align: center;
+    font-size: 45px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: black;
+    text-shadow: 3px 3px 0 #FFF, -3px 3px 0 #FFF, 3px -3px 0 #FFF, -3px -3px 0 #FFF;
+    margin: 0px 0px 0px 30px;
 }
  
