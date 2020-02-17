@@ -15,7 +15,7 @@ class SessionForm extends React.Component {
     };
 
     update(field) {
-        return e => this.setState({ [field]: e.currentTarget.value});
+        return e => this.setState({ [field]: e.target.value});
     };
 
     handleSubmit(e) {
@@ -51,7 +51,7 @@ class SessionForm extends React.Component {
             return (
                 <div>
                     <header>
-                        <Link to="/" className="header-link"><h1>Celp</h1></Link>
+                        <Link to="/" className="header-link"><h1>Celp <img src="https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_styleguide/dcb526e86d86/assets/img/logos/burst_desktop_xsmall_outline@2x.png" className="header-logo" /></h1></Link>
                     </header>
                         <div className="all-login-form">
                             <div className="login-form-container">
@@ -100,18 +100,18 @@ class SessionForm extends React.Component {
                                         <br/>
                                         <a href="#" className="login-forgot">Forgot Password?</a>
                                         <br/>
-                                        <input className="session-submit" type="submit" value={formType} />
+                                        <input className="session-submit" type="submit" value="Sign Up" />
                                         <p className="login-redirect">Already on Celp? {navLink}</p>
                                         <br/>
                                     </div>
                                 </form>
+                            </div>
+                        </div>
                                 <div className="login-pic-outer-div">
                                     <div className="login-pic-div">
                                         <img src="https://s3-media0.fl.yelpcdn.com/assets/2/www/img/7922e77f338d/signup/signup_illustration.png" className="login-pic" />
                                     </div>
                                 </div>
-                            </div>
-                        </div>
                     </div>
                 ); 
 
@@ -120,7 +120,7 @@ class SessionForm extends React.Component {
             return (
                 <div>
                     <header>
-                        <Link to="/" className="header-link"><h1>Celp</h1></Link>
+                        <Link to="/" className="header-link"><h1>Celp <img src="https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_styleguide/dcb526e86d86/assets/img/logos/burst_desktop_xsmall_outline@2x.png" className="header-logo"/></h1></Link>
                     </header>
                         <div className="all-login-form">
                             <div className="login-form-container">
@@ -164,7 +164,7 @@ class SessionForm extends React.Component {
                                         <br/>
                                         <a href="#" className="login-forgot">Forgot Password?</a>
                                         <br/>
-                                        <input className="session-submit" type="submit" value={formType} />
+                                        <input className="session-submit" type="submit" value="Log In"/>
                                         <p className="login-redirect">New to Celp? {navLink}</p>
                                         <br/>
                                     </div>

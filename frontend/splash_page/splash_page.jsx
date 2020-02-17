@@ -20,7 +20,7 @@ class SplashPage extends React.Component {
                         <Link to="/signup" className="splash-signup">Sign Up</Link>
                     </div>
                 </header>
-                <a href="#" className="splash-a-h1"><h1>Celp</h1></a>
+                <a href="#" className="splash-a-h1"><h1>Celp <img src="https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_styleguide/dcb526e86d86/assets/img/logos/burst_desktop_xsmall_outline@2x.png" className="header-logo" /></h1></a>
                 <form className="splash-form">
                     <label className="splash-label">
                         <span className="splash-span">Find</span>
@@ -38,6 +38,21 @@ class SplashPage extends React.Component {
                     <a href='#' className="splash-sub-a">Barbers</a>
                     <a href='#' className="splash-sub-a">Home Services</a>
                     <a href='#' className="splash-sub-a">Delivery</a>
+                </div>
+                <div className="splash-img-cred">
+                    <div className="cred-link">
+                        <div className="cred-des">   
+                            <a href="#" className="photo-des">
+                                <p className="cred-text-1">Chris' Cronuts</p>
+                            </a>
+                        </div>
+                        <div className="cred">
+                            <p className="cred-text">Photo by</p>
+                            <a href="#" className="photo-by">
+                                <p className="cred-name">Codename_Chris</p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

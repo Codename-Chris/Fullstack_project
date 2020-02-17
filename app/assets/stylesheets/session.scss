@@ -20,8 +20,14 @@
     font-weight: 800;
     font-size: 14px;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     text-align: right;
+    padding-top: 10px;
+    color: #999;
+}
+
+.login-redirect > a {
+    color: rgb(0, 115, 187);
 }
 
 .session-header {
@@ -61,17 +67,18 @@
     margin-top: 117px;
     padding-bottom: 12px;
     text-align: center;
+   
 }
 
 .login-pic {
-    // vertical-align: middle;
+    vertical-align: middle;
     position: absolute;
     right: 14%;
     top: 27%;
 }
 
 .session-submit {    
-    width: 320px;
+    width: 332px;
     height: 43px;
     margin-top: 10px;
     text-align: center;
@@ -112,7 +119,7 @@ fieldset {
     margin-top: 10px;
     // text-align: center;
     // background-color: #252430;
-    border: 1px solid #252430;
+    border: 1px solid #999;
     cursor: pointer;
     border-radius: 3px;
     color: black;
@@ -120,6 +127,7 @@ fieldset {
     font-family: 'IBM Plex Sans', sans-serif;
     // font-weight: bolder;
     /* background-color: ; */
+    padding-left: 10px;
 }
 
 .demo-button {
@@ -141,6 +149,7 @@ fieldset {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 15px;
+    color: rgb(0, 115, 187);
 }
 
 .login-form {
@@ -159,35 +168,66 @@ fieldset {
 
 .session-tos {
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.5em; 
+}
+
+.session-tos > a {
+    color: rgb(0, 115, 187);
 }
 
 .header-link {
     display: block;
-    padding: 12px 0;
+    // padding: 12px 0;
     background: #d32323;
     position: relative;
     z-index: 1012!important;
     border: 0;
     font-size: 100%;
-    font: inherit;  
+    // font: inherit;  
     text-decoration: none;
     margin-top: -10px;
     margin-left: -10px;
     margin-right: -10px;
-}
-
-h1 {
     color: whitesmoke;
     /* font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif; */
     text-align: center;
-    font-size: 45px;
+    font-size: 25px;
     font-family: 'IBM Plex Sans', sans-serif;
     color: black;
     text-shadow: 3px 3px 0 #FFF, -3px 3px 0 #FFF, 3px -3px 0 #FFF, -3px -3px 0 #FFF;
-    margin: 0px 0px 0px 30px;
+    // margin: 0px 0px 0px 30px;
+    padding-top: 1px;
+    top: -17px;
 }
+
+.header-logo {
+    margin-left: -15px;
+}
+
+.login-form-box > ul {
+    list-style-type: none;
+    text-align: center;
+    margin-left: -25px;
+    font-weight: bold;
+}
+
+.login-form-box > ul > li:hover {
+    color: red;
+}
+
+// h1 {
+//     color: whitesmoke;
+//     /* font-family: Arial, Helvetica, sans-serif;
+//     text-decoration: none;
+//     font-family: Helvetica Neue,Helvetica,Arial,sans-serif; */
+//     text-align: center;
+//     font-size: 45px;
+//     font-family: 'IBM Plex Sans', sans-serif;
+//     color: black;
+//     text-shadow: 3px 3px 0 #FFF, -3px 3px 0 #FFF, 3px -3px 0 #FFF, -3px -3px 0 #FFF;
+//     margin: 0px 0px 0px 30px;
+// }
  

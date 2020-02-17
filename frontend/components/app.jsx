@@ -8,8 +8,10 @@ import Footer from './footer/footer'
 
 import SignUpContainer from './session/signup_container';
 import LogInContainer from './session/login_container';
-import SplashPage from '../splash_page/splash_page';
+import BusinessShowContainer from './businesses/business_show_container'
+import BusinessesIndexContainer from './businesses/businesses_index_container'
 import { AuthRoute } from '../util/route_util';
+import Welcome from '../splash_page/welcome'
 
 const App = () => (
     <div>
@@ -17,9 +19,11 @@ const App = () => (
             <Link to="/" className="header-link"><h1>Celp</h1></Link>
         </header> */}
         <Switch>
+            <Route exact path="/businesses/:businessId" component={BusinessShowContainer} />
+            <Route exact path="/businesses" component={BusinessesIndexContainer} />
             <AuthRoute exact path="/login" component={LogInContainer} />
             <AuthRoute exact path="/signup" component={SignUpContainer} />
-            <Route exact path="/" component={SplashPage}/>
+            <Route exact path="/" component={Welcome}/>
         </Switch>
         <Footer />
     </div>
