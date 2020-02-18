@@ -35,6 +35,20 @@
     text-decoration: underline;
 }
 
+.login-redirect-bot {
+    font-size: 12px;
+    color: #999999;
+}
+
+.login-redirect-bot > a {
+    color: rgb(0, 115, 187);
+    text-decoration: none;
+}
+
+.login-redirect-bot > a:hover {
+    text-decoration: underline;
+}
+
 .session-header {
     // word-wrap: break-word !important;
     // word-break: break-word !important;

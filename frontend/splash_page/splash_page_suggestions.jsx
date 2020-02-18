@@ -15,7 +15,7 @@ const SplashSuggestions = (props) => {
             <h2 className="suggestion-title">Find the Best Business in Town</h2>
             <div className="splash-cat-list">
                 <div className="category" onClick={handleClick("Resturants")}>
-                    <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"></img>
+                    <img src="https://images.unsplash.com/photo-1555992336-fb0d29498b13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80"></img>
                     <div><p>Resturants</p></div>
                 </div>
                 <div className="category" onClick={handleClick("Bars")}>
@@ -26,7 +26,7 @@ const SplashSuggestions = (props) => {
                     <img src="https://images.unsplash.com/photo-1454388683759-ee76c15fee26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""/>
                     <div><p>Hotels</p></div>
                 </div>
-                <div className="category" onClick={handleClick("Dentist")}>
+                <div className="category" onClick={handleClick("Dentists")}>
                     <img src="https://images.unsplash.com/photo-1564420042700-a64e34a54c1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"></img>
                     <div><p>Dentists</p></div>
                 </div>

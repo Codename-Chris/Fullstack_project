@@ -100,7 +100,7 @@ class SessionForm extends React.Component {
                                         <a href="#" className="login-forgot">Forgot Password?</a>
                                         <br/>
                                         <input className="session-submit" type="submit" value="Sign Up" />
-                                        <p className="login-redirect">Already on Celp? {navLink}</p>
+                                        <p className="login-redirect-bot">Already on Celp? {navLink}</p>
                                         <br/>
                                     </div>
                                 </form>
@@ -168,7 +168,7 @@ class SessionForm extends React.Component {
                                         <a href="#" className="login-forgot">Forgot Password?</a>
                                         <br/>
                                         <input className="session-submit" type="submit" value="Log In"/>
-                                        <p className="login-redirect">New to Celp? {navLink}</p>
+                                        <p className="login-redirect-bot">New to Celp? {navLink}</p>
                                         <br/>
                                     </div>
                                 </form>
