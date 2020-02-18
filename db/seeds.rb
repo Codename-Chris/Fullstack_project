@@ -16,4 +16,4 @@ User.create (email: 'guestdemo2@aol.com', username: "guestdemo02",password: "pas
 
 User.create (email: 'guestdemo3@aol.com', username: "guestdemo03",password: "password333")
 
-User.create (email: 'guestdemo4@aol.com', username: "guestdemo04",password: "password444")
+User.create (email: 'christophergarthright@gmail.com', username: "Chris",password: "chris313")
