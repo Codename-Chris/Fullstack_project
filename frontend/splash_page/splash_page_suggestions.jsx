@@ -14,7 +14,7 @@ const SplashSuggestions = (props) => {
         <div className="splash-suggestions">
             <h2 className="suggestion-title">Find the Best Business in Town</h2>
             <div className="splash-cat-list">
-                <div className="category" onClick={handleClick("Korean")}>
+                <div className="category" onClick={handleClick("Resturants")}>
                     <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"></img>
                     <div><p>Resturants</p></div>
                 </div>

@@ -20,14 +20,19 @@
     font-weight: 800;
     font-size: 14px;
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     text-align: right;
     padding-top: 10px;
-    color: #999;
+    color: black;
 }
 
 .login-redirect > a {
     color: rgb(0, 115, 187);
+    text-decoration: none;
+}
+
+.login-redirect > a:hover {
+    text-decoration: underline;
 }
 
 .session-header {
@@ -40,6 +45,10 @@
     line-height: 1.28571em;
     color: #d32323;
     text-align: center;
+}
+
+.session-subhead {
+    font-weight: bold;
 }
 
 .login-form-box {
@@ -92,6 +101,10 @@
     font-weight: bolder;
 } 
 
+.session-submit:hover {
+    opacity: 0.5;
+}
+
 fieldset {
     margin: 0 30px;
     border: none;
@@ -131,25 +144,35 @@ fieldset {
 }
 
 .demo-button {
-    width: 320px;
-    padding: 8px 19px 9px;
+    width: 332px;
+    height: 43px;
+    margin-top: 10px;
+    text-align: center;
     background-color: red;
     border: 1px solid red;
-    border-radius: 3px;
-    color: #ffff;
-    font-weight: bold;
-    font-size: 13.5px;
     cursor: pointer;
-    margin-bottom: 20px;
+    border-radius: 3px;
+    color: #FFFF;
+    font-size: 15px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bolder;
 }
 
+.demo-button:hover {
+    opacity: 0.5;
+}
 .login-forgot {
     // text-align: right !important;
     // margin-right: 10%;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 12px;
     color: rgb(0, 115, 187);
+    text-decoration: none;
+}
+
+.login-forgot:hover {
+    text-decoration: underline;
 }
 
 .login-form {
@@ -170,10 +193,17 @@ fieldset {
     text-align: center;
     font-size: 12px;
     line-height: 1.5em; 
+    width: 60%;
+    margin-bottom: -3%;
 }
 
 .session-tos > a {
     color: rgb(0, 115, 187);
+    text-decoration: none;
+}
+
+.session-tos > a:hover {
+    text-decoration: underline;
 }
 
 .header-link {

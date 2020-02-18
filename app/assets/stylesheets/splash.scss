@@ -9,6 +9,7 @@
     margin-top: -10px;
     margin-left: -10px;
     margin-right: -30px;
+    font-size: 14px;
 }
 .splash-header {
     display: flex;
@@ -59,6 +60,7 @@
 }
 
 .splash-signup:hover {
+    transition: 0.75s;
     background-color: white;
     color: grey;
 }
@@ -94,18 +96,35 @@
 
 .splash-label {
     background-color: white;
-    border-right: 1px solid black;
+    
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    padding: 12px 20px 12px 10px;
+    padding: 12px 120px 12px 15px;
+    // padding: 12px 20px 12px 10px;
+}
+
+.splash-label-2 {
+    background-color: white;
+    // border-left: 1px solid #666666;
+    padding: 12px 120px 12px 15px;
 }
 
 .splash-span {
     padding-right: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    color: grey;
+    color: #666666;
     font-weight: bolder;
+}
+
+.splash-span-2 {
+    padding-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #666666;
+    font-weight: bolder;
+    border-left: 1px solid rgb(176, 176, 176);
+    padding-left: 10px;
 }
 
 .splash-input {
@@ -113,12 +132,20 @@
     border-color: transparent;
     width: 230px;
     color: black;
-    font-size: 16px;
+    font-size: 18px;
     outline: none;
 }
 
-.splash-input > ::placeholder {
-    color: grey;
+.splash-input-2 {
+    border: none;
+    border-color: transparent;
+    width: 230px;
+    color: black;
+    font-size: 18px;
+    outline: none;
+}
+.splash-input-2::placeholder {
+    color: black;
 }
 
 .splash-but {
@@ -141,7 +168,7 @@
 }
 
 .splash-sub-a:hover {
-    border-bottom: 2px solid white;
+    text-decoration: underline;
 }
 .splash-sub-links > a {
     color: white;
@@ -149,8 +176,8 @@
     text-decoration: none;
     // margin-left: 15px;
     font-weight: bold;
-    padding: 8px;
-    font-family: Helvetica;
+    padding: 0 20px;
+    padding-top: 10px;
 }
 
 .splash-suggestions {

@@ -15,7 +15,7 @@ class SessionForm extends React.Component {
     };
 
     update(field) {
-        return e => this.setState({ [field]: e.target.value});
+        return (e) => this.setState({ [field]: e.target.value});
     };
 
     handleSubmit(e) {
@@ -55,12 +55,12 @@ class SessionForm extends React.Component {
                     </header>
                         <div className="all-login-form">
                             <div className="login-form-container">
-                                <br/>
                                 <form onSubmit={this.handleSubmit} className="login-form-box">
                                     <h2 className="session-header">Sign Up for Celp!</h2>
-                                    <p className="session-tos"> By logging in, you agree to Celp’s 
+                                    <p class="session-subhead">Connect with great local businesses</p>
+                                     <p className="session-tos"> By continuing, you agree to Celp’s
                                         <a href="#"> Terms of Service </a> 
-                                        and 
+                                        acknowledge Celp’s
                                         <a href="#"> Privacy Policy </a>
                                         .
                                     </p>
@@ -70,7 +70,6 @@ class SessionForm extends React.Component {
                                         <legend align='center' className='leg-or'>OR</legend>
                                     </fieldset>
                                     <div className="login-form">
-                                        <br/>
                                         <label>
                                         <input type="text"
                                                 value={this.state.email}
@@ -124,11 +123,15 @@ class SessionForm extends React.Component {
                     </header>
                         <div className="all-login-form">
                             <div className="login-form-container">
-                                <br/>
                                 <form onSubmit={this.handleSubmit} className="login-form-box">
                                     <h2 className="session-header">Welcome Back to Celp</h2>
-                                    <br/>
                                     <p className="login-redirect">New to Celp? {navLink}!</p>
+                                    <p className="session-tos"> By logging in, you agree to Celp’s
+                                            <a href="#"> Terms of Service </a>
+                                        and
+                                            <a href="#"> Privacy Policy </a>
+                                        .
+                                    </p>
                                     {this.renderErrors()}
                                     <div className="demo-input">
                                         <input

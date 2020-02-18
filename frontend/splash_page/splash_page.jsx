@@ -31,6 +31,15 @@ class SplashPage extends React.Component {
                         className="splash-input"
                         />
                     </label>
+                    <label className="splash-label-2">
+                        <span className="splash-span-2">Near</span>
+                        <input
+                            type="text"
+                            onChange={this.update}
+                            placeholder="New York, NY"
+                            className="splash-input-2"
+                        />
+                    </label>
                     <button type="submit" className="splash-but">Search</button>
                 </form>
                 <div className="splash-sub-links">
