@@ -8,12 +8,12 @@
 
 User.destroy_all 
 
-User.create (email: 'guestdemo@gmail.com', username: 'guestdemo1',password: "password123")
+User.create(email: 'guestdemo@gmail.com', username: 'guestdemo1', password: "password123")
 
-User.create (email: 'guestdemo1@aol.com', username: "guestdemo01",password: "password111")
+User.create(email: 'guestdemo1@aol.com', username: "guestdemo01", password: "password111")
 
-User.create (email: 'guestdemo2@aol.com', username: "guestdemo02",password: "password222")
+User.create(email: 'guestdemo2@aol.com', username: "guestdemo02", password: "password222")
 
-User.create (email: 'guestdemo3@aol.com', username: "guestdemo03",password: "password333")
+User.create(email: 'guestdemo3@aol.com', username: "guestdemo03", password: "password333")
 
-User.create (email: 'christophergarthright@gmail.com', username: "Chris",password: "chris313")
+User.create(email: 'christophergarthright@gmail.com', username: "Chris", password: "chris313")
