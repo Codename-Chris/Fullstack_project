@@ -57,7 +57,7 @@ class SessionForm extends React.Component {
                             <div className="login-form-container">
                                 <form onSubmit={this.handleSubmit} className="login-form-box">
                                     <h2 className="session-header">Sign Up for Celp!</h2>
-                                    <p class="session-subhead">Connect with great local businesses</p>
+                                    <p className="session-subhead">Connect with great local businesses</p>
                                      <p className="session-tos"> By continuing, you agree to Celp’s
                                         <a href="#"> Terms of Service </a> 
                                         acknowledge Celp’s
