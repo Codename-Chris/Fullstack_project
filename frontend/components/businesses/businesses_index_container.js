@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import BusinessesIndex from "./businesses_index";
 
+
 const mapStateToProps = (state) => {
     return {
-        // businesses: Object.values(state.entities.businesses)
+        businesses: Object.values(state.entities.businesses)
     };
 };
 
