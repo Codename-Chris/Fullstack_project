@@ -43,5 +43,5 @@ biz3.photos.attach(io: pizza1, filename: 'pizza1.jpg')
 cafe1 = File.open(Rails.root.join('app', 'assets', 'images', 'cafe1.jpg'))
 biz4.photos.attach(io: cafe1, filename: 'cafe1.jpg')
 
-bar1 = File.open(Rails.root.join('app', 'assets', 'images', 'bar1.jpeg'))
-biz5.photos.attach(io: bar1, filename: 'bar1.jpeg')
+bar1 = File.open(Rails.root.join('app', 'assets', 'images', 'bar1.jpg'))
+biz5.photos.attach(io: bar1, filename: 'bar1.jpg')
