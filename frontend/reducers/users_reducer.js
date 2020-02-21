@@ -1,18 +1,13 @@
-// import 
+import { RECEIVE_USERS } from "../actions/users_action";
 
-// const UsersReducer = (oldState = {}, action) => {
-//     Object.freeze(oldState)
-//     let newState = Object.assign({}, oldState)
-//     switch (action.type) {
-//         case: 
+const UsersReducer = (state = {}, action) => {
+    Object.freeze(state);
+    switch (action.type) {
+        case RECEIVE_USERS:
+            return action.users
+        default:
+            return state;
+    }
+};
 
-//         case:
-
-//         case:
-
-//         default:
-//             return oldState;
-//     }
-// }
-
-// export default UsersReducer;
+export default UsersReducer;

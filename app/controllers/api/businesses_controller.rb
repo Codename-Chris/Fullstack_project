@@ -17,10 +17,6 @@ class Api::BusinessesController < ApplicationController
     private 
 
     def selected_business
-        Businesss.find(params[:id])
-    end 
-
-    def business_params 
-        params.require(:business).permit(:name, :address, :website, :phone_number)
-    end   
+        Business.find(params[:id])
+    end  
 end

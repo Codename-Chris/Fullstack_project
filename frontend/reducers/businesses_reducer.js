@@ -11,8 +11,9 @@ const BusinessesReducer = (oldState = {}, action) => {
         case RECEIVE_BUSINESSES:
             return action.businesses;
         case RECEIVE_BUSINESS:
-            newState[action.business];
-            return newState;
+            return Object.assign(
+                {}, state, { [action.business.id]: action.business }
+            )
         case CLEAR_BUSINESSES:
             newState = {}
             return newState;

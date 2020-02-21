@@ -1,3 +1,245 @@
 // Place all the styles related to the Businesses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.biz-index-header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #eeeeef;
+    margin-left: -10px;
+    margin-right: -10px;
+    // background-color: red;
+}
+.biz-header-link {
+    text-decoration: none;
+    // justify-content: center;
+    // display: flex;
+    // margin-top: 80px;
+    // margin-bottom: -130px;
+    font-size: 25px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: black;
+    text-shadow: 3px 3px 0 #FFF, -3px 3px 0 #FFF, 3px -3px 0 #FFF, -3px -3px 0 #FFF;
+}
+.biz-header-link > h1 {
+    margin-left: -50%;
+    // margin-top: -15%;
+}
+
+.index-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.biz-h1 {
+    font-size: 24px;
+    padding-left: 12%;
+}
+
+.biz-div-box2 {
+    display: flex;
+}
+
+.biz-form-search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // text-shadow: 1px 1px 0 grey;
+    
+}
+
+.biz-find {
+    display: flex;
+    padding: 7px;
+    box-shadow: none;
+    border: none;
+    background: #fff;
+    margin: -5px;
+    color: #666666;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: -3px 2px 7px 5px #f0f0f0;
+}
+
+.biz-header-logo {
+    margin-left: -15px;
+}
+
+.biz-near {
+    display: flex;
+    padding: 7px;
+    box-shadow: none;
+    border: none;
+    background: #fff;
+    margin: -5px;
+    color: #666666;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow:  5px 0px 5px 6px #f0f0f0;
+}
+
+.biz-find-search {
+    border-right: 1px solid black;
+    // display: inline-block;
+    // padding: 3px;
+    box-shadow: none;
+    border: none;
+    border-radius: 4px;
+    background: #fff;
+    outline-width: 0;
+    width: 330px;
+    // box-shadow: 5px 10px 4px 2px  grey;
+    display: flex;
+    padding: 15px;
+    box-shadow: none;
+    margin: -5px;
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow:  -1px 1px 5px 6px #f0f0f0;  
+}
+
+.biz-near-div {
+    display: flex;
+    padding: 7px;
+    box-shadow: none;
+    border: none;
+    background: #fff;
+    margin: -5px;
+    color: #666666;
+    font-size: 16px;
+}
+
+.biz-near-search {
+    // padding: 3px;
+    box-shadow: none;
+    border: none;
+    background: #fff;
+    outline-width: 0;
+    width: 330px;
+    display: flex;
+    padding: 15px;
+    margin: -5px;
+    color: #666666;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow:  5px 0px 5px 6px #f0f0f0;
+}
+
+.biz-near-search::placeholder {
+    color: black;
+}
+
+.biz-but {
+    background-color: rgb(244, 57, 57);
+    cursor: pointer;
+    color: white;
+    // width: 40px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 0;
+    margin: 0;
+    text-align: center;
+    padding: 17px;
+    box-shadow:  5px 0px 5px 6px #f0f0f0;
+}
+
+.biz-but > a {
+    text-decoration: none;
+    color: white;
+}
+
+.biz-index-item {
+    padding-top: 20px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+
+.biz-index-item:hover {
+    box-shadow:  0px 1px 6px 3px #cbcbcd;
+    cursor: pointer;
+}
+
+.biz-index-item-inner {
+    padding-right: 180px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+}
+
+.biz-name {
+    color: black;
+    padding-bottom: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.biz-name:hover {
+    text-decoration: underline;
+}
+
+.biz-rating {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.biz-category {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.biz-add-div {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+}
+
+.biz-add-div > p {
+    color: grey;
+    font-size: 14px;
+    padding-bottom: 7px;
+    width: 85px;
+    text-align: center;
+}
+.biz-address {
+    margin-top: -15px;
+}
+.biz-results {
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+// .biz-map {
+//     padding-left: 10px;
+// }
+
+// .biz-img-map {
+//     top: 25%;
+//     right: 25%;
+// }
+
+.biz-box {
+    top: 25%;
+    right: 25%;
+    border: 1px solid #e6e6e6;
+}
+
+.biz-img-pic {
+    height: 190px;
+    width: 190px;
+    border-radius: 4px;
+    margin-left: 15px;
+    display: flex;
+    padding-bottom: 15px;
+}

@@ -3,9 +3,10 @@ import {
     LOGOUT_CURRENT_USER 
 } from '../actions/session_actions';
 
-const _nullSession = {
+const _nullSession = Object.freeze({
     id: null
-}
+});
+
 const SessionReducer = (oldState = _nullSession, action) => {
     Object.freeze(oldState)
     let newState = Object.assign({},oldState)

@@ -4,7 +4,16 @@ import { Link } from 'react-router-dom';
 class SplashPage extends React.Component {
     constructor (props) {
         super(props)
+        // this.handleLogOut = this.handleLogOut.bind(this)    
     }
+    // componentDidMount() {
+    //     this
+    // }
+    
+    // handleLogOut(e) {
+    //     e.preventDefault();
+    //     this.props.logout()
+    // }
 
     render() {
         return (
@@ -40,24 +49,24 @@ class SplashPage extends React.Component {
                             className="splash-input-2"
                         />
                     </label>
-                    <button type="submit" className="splash-but">Search</button>
+                    <button type="submit" className="splash-but"><Link to="/businesses">Search</Link></button>
                 </form>
                 <div className="splash-sub-links">
-                    <a href='#' className="splash-sub-a">Resturants</a>
-                    <a href='#' className="splash-sub-a">Barbers</a>
-                    <a href='#' className="splash-sub-a">Home Services</a>
-                    <a href='#' className="splash-sub-a">Delivery</a>
+                    <a href='#/businesses' className="splash-sub-a">Resturants</a>
+                    <a href='#/businesses' className="splash-sub-a">Barbers</a>
+                    <a href='#/businesses' className="splash-sub-a">Home Services</a>
+                    <a href='#/businesses' className="splash-sub-a">Delivery</a>
                 </div>
                 <div className="splash-img-cred">
                     <div className="cred-link">
                         <div className="cred-des">   
-                            <a href="#" className="photo-des">
+                            <a href="#/businesses/1" className="photo-des">
                                 <p className="cred-text-1">Chris' Cronuts</p>
                             </a>
                         </div>
                         <div className="cred">
                             <p className="cred-text">Photo by</p>
-                            <a href="#" className="photo-by">
+                            <a href="https://github.com/Codename-Chris" className="photo-by">
                                 <p className="cred-name">Codename_Chris</p>
                             </a>
                         </div>
