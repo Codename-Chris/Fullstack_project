@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application'%>
+    <%= favicon_link_tag asset_path('logo1.png') %>
   </head>
   
   <script type="text/javascript">
@@ -16,6 +17,8 @@
   window.diner1 = '<%= image_url('diner1.jpg') %>'
   window.cronut1 = '<%= image_url('cronut1.jpg') %>'
   </script>
+  
+  
 
   <body>
     <%= yield %>
