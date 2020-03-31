@@ -97,7 +97,7 @@ class SessionForm extends React.Component {
                                             />
                                         </label>
                                         <br/>
-                                        <a href="#" className="login-forgot">Forgot Password?</a>
+                                        
                                         <br/>
                                         <input className="session-submit" type="submit" value="Sign Up" />
                                         <p className="login-redirect-bot">Already on Celp? {navLink}</p>

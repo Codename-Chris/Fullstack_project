@@ -30,6 +30,6 @@ export const fetchBusinesses = () => dispatch => {
 };
 
 export const fetchBusiness = (id) => dispatch => {
-    return BizAPIUtil.fetchBusinesses(id)
+    return BizAPIUtil.fetchBusiness(id)
     .then((business) => dispatch(receiveBusiness(business)))
 };
