@@ -23,28 +23,29 @@ export const receiveSessionErrors = (errors) => {
         type: RECEIVE_SESSION_ERRORS,
         errors
     }
-};  
+};
 
 export const signup = (user) => dispatch => {
     return APIUtil.signup(user)
-    .then(user => dispatch(receiveCurrentUser(user)),
-    errors => dispatch(receiveSessionErrors(errors.responseJSON)))
+        .then(user => dispatch(receiveCurrentUser(user)),
+            errors => dispatch(receiveSessionErrors(errors.responseJSON)))
 };
 
 export const login = (user) => dispatch => {
-    
+
     return APIUtil.login(user)
         .then(user => {
-        
-        return dispatch(receiveCurrentUser(user))
-    },
-    errors => {
-        
-        return dispatch(receiveSessionErrors(errors.responseJSON)
-    )})
+
+            return dispatch(receiveCurrentUser(user))
+        },
+            errors => {
+
+                return dispatch(receiveSessionErrors(errors.responseJSON)
+                )
+            })
 };
 
 export const logout = () => dispatch => {
     return APIUtil.logout()
-    .then(() => dispatch(logoutCurrentUser()))
+        .then(() => dispatch(logoutCurrentUser()))
 };

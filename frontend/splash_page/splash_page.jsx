@@ -4,21 +4,60 @@ import { Link } from 'react-router-dom';
 class SplashPage extends React.Component {
     constructor (props) {
         super(props)
-        // this.handleLogOut = this.handleLogOut.bind(this)    
+        this.handleLogOut = this.handleLogOut.bind(this)    
+        this.getLinks = this.getLinks.bind(this)
+        // this.update = this.update.bind(this);
     }
-    // componentDidMount() {
-    //     this
-    // }
+    componentDidUpdate() {
+        this.getLinks()
+    }
+
+    update(field) {
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        })
+    }
     
-    // handleLogOut(e) {
-    //     e.preventDefault();
-    //     this.props.logout()
-    // }
+    handleLogOut(e) {
+        e.preventDefault();
+        this.props.logout()
+    }
+
+    getLinks() {
+        if (!this.props.user) {
+            return (
+            <header className="splash-header">
+                <div className="splash-left-links">
+                    <a href="#" className="splash-a">Write a Review</a>
+                    <a href="https://github.com/Codename-Chris" className="splash-a">Github</a>
+                    <a href="https://www.linkedin.com/in/christopher-garthright/" className="splash-a">LinkedIn</a>
+                </div>
+                <div className="splash-right-links">
+                    <Link to="/login" className="splash-r-l">Log In</Link>
+                    <Link to="/signup" className="splash-signup">Sign Up</Link>
+                </div>
+            </header>
+            );
+        } else {
+            return ( 
+                <header className="splash-header">
+                    <div className="splash-left-links">
+                        <a href="#" className="splash-a">Write a Review</a>
+                        <a href="https://github.com/Codename-Chris" className="splash-a">Github</a>
+                        <a href="https://www.linkedin.com/in/christopher-garthright/" className="splash-a">LinkedIn</a>
+                    </div>
+                    <div className="splash-right-links">
+                        <button className="splash-r-l" onClick={this.logout}>Log Out</button>
+                    </div>
+                </header>
+            )
+        }
+    }
 
     render() {
         return (
             <div className="all-splash">
-                <header className="splash-header">
+                {/* <header className="splash-header">
                     <div className="splash-left-links">
                         <a href="#" className="splash-a">Write a Review</a>
                         <a href="https://github.com/Codename-Chris" className="splash-a">Github</a>
@@ -28,7 +67,8 @@ class SplashPage extends React.Component {
                         <Link to="/login" className="splash-r-l">Log In</Link>
                         <Link to="/signup" className="splash-signup">Sign Up</Link>
                     </div>
-                </header>
+                </header> */}
+                {this.getLinks()}
                 <a href="#" className="splash-a-h1"><h1>Celp <img src="https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_styleguide/dcb526e86d86/assets/img/logos/burst_desktop_xsmall_outline@2x.png" className="header-logo" /></h1></a>
                 <form className="splash-form">
                     <label className="splash-label">
