@@ -24,6 +24,7 @@ class SplashPage extends React.Component {
     }
 
     getLinks() {
+        // debugger
         if (!this.props.user) {
             return (
             <header className="splash-header">

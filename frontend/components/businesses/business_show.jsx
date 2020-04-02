@@ -7,10 +7,14 @@ class BusinessShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchBusiness(this.props.match.params.businessId)
+    //    debugger
+       if (!this.props.business) {
+        //    debugger
+        this.props.fetchBusiness(parseInt(this.props.match.params.businessId))
+        this.render();
         // if (this.props.currentUser) {
         //     this.props.fetchUser(this.props.currentUser.id);
-        // }
+        }
     }
 
     update(field) {
@@ -24,6 +28,10 @@ class BusinessShow extends React.Component {
     }
 
     render() {
+        // debugger
+        if (!this.props.business) {
+            return <></> 
+        }
         return (
             // <div>
             //     <header>

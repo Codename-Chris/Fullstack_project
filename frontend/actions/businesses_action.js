@@ -12,6 +12,7 @@ export const receiveBusinesses = (businesses) => {
 };
 
 export const receiveBusiness = (business) => {
+    // debugger
     return {
         type: RECEIVE_BUSINESS,
         business
@@ -30,6 +31,10 @@ export const fetchBusinesses = () => dispatch => {
 };
 
 export const fetchBusiness = (id) => dispatch => {
+    // debugger
     return BizAPIUtil.fetchBusiness(id)
-    .then((business) => dispatch(receiveBusiness(business)))
+    .then((business) => {
+        // debugger
+        dispatch(receiveBusiness(business))}
+    )
 };
