@@ -37,4 +37,4 @@ export const fetchBusiness = (id) => dispatch => {
         // debugger
         dispatch(receiveBusiness(business))}
     )
-};
+}; 

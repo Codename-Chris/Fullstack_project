@@ -48,7 +48,7 @@ class SplashPage extends React.Component {
                         <a href="https://www.linkedin.com/in/christopher-garthright/" className="splash-a">LinkedIn</a>
                     </div>
                     <div className="splash-right-links">
-                        <button className="splash-r-l" onClick={this.logout}>Log Out</button>
+                        <button className="splash-signout" onClick={this.props.logout}>Log Out</button>
                     </div>
                 </header>
             )

@@ -64,6 +64,25 @@
     background-color: white;
     color: grey;
 }
+
+.splash-signout {
+    text-decoration: none;
+    padding: 20px;
+    padding: 7px 20px;
+    border: 2px solid white;
+    border-radius: 4px;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.splash-signout:hover {
+    transition: 0.5s;
+    background-color: white;
+    color: grey;
+}
+
 .splash-left-links{
     margin-right: 250px;
     margin-top: 20px;
