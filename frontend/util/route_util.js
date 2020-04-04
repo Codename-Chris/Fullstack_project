@@ -4,7 +4,7 @@ import {Redirect, withRouter, Route} from 'react-router-dom';
 
 const mapStateToProps = state => {
     return { loggedIn: Boolean(state.session.id) };
-}
+};
 
 const Auth = ({ component: Component, path, loggedIn, exact }) => (
     <Route path={path} exact={exact} render={(props) => (

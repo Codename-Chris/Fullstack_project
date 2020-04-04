@@ -23,4 +23,4 @@ const BusinessesReducer = (oldState = {}, action) => {
     };
 };
 
-export default BusinessesReducer;
+export default BusinessesReducer; 
