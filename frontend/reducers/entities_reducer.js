@@ -5,6 +5,6 @@ import UsersReducer from "./users_reducer";
 const EntitiesReducer = combineReducers({
     users: UsersReducer,
     businesses: BusinessesReducer
-});
+}); 
 
 export default EntitiesReducer; 
