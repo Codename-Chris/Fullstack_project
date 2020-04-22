@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BusinessIndexItem from './businesses_index_item'
-import BusinessMap from '../map/business_map';
+// import BusinessMap from '../map/business_map';
 
 
 
@@ -26,7 +26,7 @@ class BusinessesIndex extends React.Component {
     }
 
     render() {
-        debugger
+        // debugger
         return (
             // <div>
             //     <header>
@@ -89,7 +89,7 @@ class BusinessesIndex extends React.Component {
                             <img src="https://www.legalgenealogist.com/wordpress/wp-content/uploads/2019/09/GMaps.jpg" className="biz-img-map"/>
                             <img src="https://www.legalgenealogist.com/wordpress/wp-content/uploads/2019/09/GMaps.jpg" className="biz-img-map" />
                             <img src="https://www.legalgenealogist.com/wordpress/wp-content/uploads/2019/09/GMaps.jpg" className="biz-img-map" />
-                            <BusinessMap />
+                            {/* <BusinessMap /> */}
                         </div>
                     </div>
                 </div>
