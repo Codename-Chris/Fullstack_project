@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BusinessIndexItem from './businesses_index_item'
+import BusinessMap from '../map/business_map';
 
 
 
@@ -20,10 +21,12 @@ class BusinessesIndex extends React.Component {
     };
     
     componentDidMount() {
+        // debugger
         this.props.fetchBusinesses()
     }
 
     render() {
+        debugger
         return (
             // <div>
             //     <header>
@@ -74,7 +77,7 @@ class BusinessesIndex extends React.Component {
                     <h1 className="biz-h1"> Best Businesses near New York </h1>
                     <div className="biz-div-box2">
                         <div className="biz-box">
-                            <h2 className="biz-results"> All Results </h2>
+                            <h2 className="biz-results"> All Results</h2>
                             {this.props.businesses.map(business => (
                                <BusinessIndexItem 
                                     business={business} 
@@ -84,6 +87,9 @@ class BusinessesIndex extends React.Component {
                         </div>
                         <div className="biz-map">
                             <img src="https://www.legalgenealogist.com/wordpress/wp-content/uploads/2019/09/GMaps.jpg" className="biz-img-map"/>
+                            <img src="https://www.legalgenealogist.com/wordpress/wp-content/uploads/2019/09/GMaps.jpg" className="biz-img-map" />
+                            <img src="https://www.legalgenealogist.com/wordpress/wp-content/uploads/2019/09/GMaps.jpg" className="biz-img-map" />
+                            <BusinessMap />
                         </div>
                     </div>
                 </div>
