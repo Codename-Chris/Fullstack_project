@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import BusinessMap from '../map/business_map'
+import BusinessMap from '../map/business_map'
 
 class BusinessShow extends React.Component {
     constructor(props) {
@@ -117,8 +117,8 @@ class BusinessShow extends React.Component {
                         </div>
                         <div className="biz-show-location-map">
                             <div className="biz-show-inner-map">
-                                <img src="https://www.legalgenealogist.com/wordpress/wp-content/uploads/2019/09/GMaps.jpg" className="biz-show-img-map" />
-                                {/* <BusinessMap /> */}
+                                {/* <img src="https://www.legalgenealogist.com/wordpress/wp-content/uploads/2019/09/GMaps.jpg" className="biz-show-img-map" /> */}
+                                <BusinessMap />
                             </div>
                             <div className="biz-add-div">
                                 <p>{this.props.business.address}</p>
