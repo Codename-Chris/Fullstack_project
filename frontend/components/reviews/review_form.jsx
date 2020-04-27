@@ -97,6 +97,22 @@ class ReviewForm extends React.Component {
                     </div>
                 </header>
                 <p>HI IM THE REVIEW FORM :)</p>
+                <form className="form1">
+                    <div>
+                        <div>
+                            Chris' Cronuts
+                        </div>
+                        <div>
+                            <div>
+                                <i className="fas fa-star" id="biz-stars-unrev" />
+                                <i className="fas fa-star" id="biz-stars-unrev" />
+                                <i className="fas fa-star" id="biz-stars-unrev" />
+                                <i className="fas fa-star" id="biz-stars-unrev" />
+                                <i className="fas fa-star" id="biz-stars-unrev" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
                 <img src="https://media0.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif?cid=ecf05e478702021b1b264ee821fb10a59133399882f5f9b9&rid=giphy.gif" alt="" />
                 {/* <Footer /> */}
             </>

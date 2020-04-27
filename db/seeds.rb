@@ -45,7 +45,7 @@ biz2 = Business.create(
 
 biz3 = Business.create(
     name: "Grand Ave Pizza", 
-    category: "Restaurant", 
+    category: "Pizza", 
     address: "7829 Astoria Blvd", 
     phone_number: "718-897-2390", 
     website: "Grandavepizza.com",
