@@ -93,9 +93,15 @@ class BusinessShow extends React.Component {
                             <div className="biz-show-info">
                                 {/* <Link className="biz-name" to={`/businesses/${props.business.id}`}>{props.business.name}</Link> */}
                                 <p className="biz-show-name"> {this.props.business.name} </p>
-                                <p className="biz-rating">* * * * * </p>
+                                <p className="biz-rating">
+                                    <i className="fas fa-star" id="biz-stars" />
+                                    <i className="fas fa-star" id="biz-stars" />
+                                    <i className="fas fa-star" id="biz-stars" />
+                                    <i className="fas fa-star" id="biz-stars" />
+                                    <i className="fas fa-star" id="biz-stars" />
+                                </p>
                                 {/* <p> {this.props.business.description} </p> */}
-                                <p className="biz-category">$$$ • {this.props.business.category}</p>
+                                <p className="biz-category">$$ <span className="biz-category-span"> • {this.props.business.category}</span></p>
                                 <button type="submit" className="biz-show-but">
                                     <Link to={`/businesses/${this.props.business.id}/reviews`} className="biz-show-search-link">
                                         Write a Review
@@ -104,28 +110,69 @@ class BusinessShow extends React.Component {
                             </div> 
                         </div>   
                         <div className="covid-19">
-                            <p>COVID-19 Advisory: <span className="covid-19-biz">Business operations may be affected</span></p>
+                            <p className="covid-19-p1">COVID-19 Advisory: <span className="covid-19-biz">Business operations may be affected</span></p>
                             <p>Due to ongoing precautionary measures, please contact the business directly for updated hours and availability.</p>
                         </div>
                         <div className="biz-show-side-info"> 
                             <p className="biz-website">{this.props.business.website}</p>
                             <p className="biz-phone-num">({this.props.business.phone_number}) 767-2880</p>
-                            <p>More Info Coming Soon!</p>
+                            <p>Open Now!</p>
                         </div>  
                         <div className="biz-show-location-hours">
                             Location {`&`} Hours
                         </div>
                         <div className="biz-show-location-map">
-                            <div className="biz-show-inner-map">
+                            <div className="biz-show-inner-map2">
                                 {/* <img src="https://www.legalgenealogist.com/wordpress/wp-content/uploads/2019/09/GMaps.jpg" className="biz-show-img-map" /> */}
-                                <BusinessMap />
+                                <div className="biz-show-map"><BusinessMap /></div>
+                                <div className="biz-map-add-div">
+                                    <p>{this.props.business.address}</p>
+                                </div>
+                                <div>
+                                    <p className="biz-map-address">New York, NY</p>
+                                </div>
                             </div>
-                            <div className="biz-add-div">
-                                <p>{this.props.business.address}</p>
-                                <p className="biz-address">New York, NY</p>
+                            <div className="business-show-container-mid-hours">
+                                {/* <div><p id="week">Mon</p><p>{this.props.business.opening_hours}</p></div>
+                                <div><p id="week">Tue</p><p>{this.props.business.opening_hours}</p></div>
+                                <div><p id="week">Wed</p><p>{this.props.business.opening_hours}</p></div>
+                                <div><p id="week">Thu</p><p>{this.props.business.opening_hours}</p></div>
+                                <div><p id="week">Fri</p><p>{this.props.business.opening_hours}</p></div>
+                                <div><p id="week">Sat</p><p>{this.props.business.opening_hours}</p></div>
+                                <div><p id="week">Sun</p><p>{this.props.business.opening_hours}</p></div> */}
+
+                                <div><p id="week">Mon</p><p>12:00am - 12:00pm</p></div>
+                                <div><p id="week">Tue</p><p>12:00am - 12:00pm</p></div>
+                                <div><p id="week">Wed</p><p>12:00am - 12:00pm</p></div>
+                                <div><p id="week">Thu</p><p>12:00am - 12:00pm</p></div>
+                                <div><p id="week">Fri</p><p>12:00am - 12:00pm</p></div>
+                                <div><p id="week">Sat</p><p>12:00am - 12:00pm</p></div>
+                                <div><p id="week">Sun</p><p>12:00am - 12:00pm</p></div>
                             </div>
-                    
                         </div>
+
+                    </div>
+                    <div className="biz-show-rec-rev">
+                        <p className="rec-rev-p">Recommended Reviews</p>
+                    </div>
+
+                    <div className="biz-show-rev-outter">
+                        <div className="biz-show-rev-inner"></div>
+                        <div className="biz-show-rev-start">
+                            <div id="biz-show-rev-stars">
+                                <i className="fas fa-star" id="biz-stars-unrev"/>
+                                <i className="fas fa-star" id="biz-stars-unrev" />
+                                <i className="fas fa-star" id="biz-stars-unrev"/>
+                                <i className="fas fa-star" id="biz-stars-unrev"/>
+                                <i className="fas fa-star" id="biz-stars-unrev" />
+                            </div>
+                            <div>Start your review of <span className="biz-show-name-span">{this.props.business.name}</span></div>
+                        </div>
+                    {/* </div> */}
+                    </div>  
+                    <div className="img-outter">
+                        <img src="https://media2.giphy.com/media/26gssvmflfcT0bmTe/giphy.gif?cid=ecf05e47d834345a3af1baa8599b229e72214f7e452b2879&rid=giphy.gif" alt=""/>
+                        <img src="https://media.giphy.com/media/26gsaKErbuJAD2L4I/giphy.gif" id="img"/>
                     </div>
                 </div>
             </div>

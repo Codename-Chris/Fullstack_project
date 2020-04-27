@@ -8,7 +8,12 @@
     border-bottom: 1px solid #eeeeef;
     margin-left: -10px;
     margin-right: -10px;
+    margin-top: -10px;
     // background-color: red;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 1;
 }
 .biz-header-link {
     text-decoration: none;
@@ -170,7 +175,6 @@
 }
 
 .biz-index-item-inner {
-    padding-right: 180px;
     display: flex;
     flex-direction: column;
     padding-left: 50px;
@@ -178,7 +182,7 @@
 
 .biz-name {
     color: black;
-    padding-bottom: 10px;
+    // padding-bottom: 10px;
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
@@ -191,35 +195,95 @@
 .biz-rating {
     margin-bottom: 5px;
     font-size: 18px;
-    margin-left: 5px;
+    // margin-left: 5px;
+    margin-top: 5px;
+}
+
+#biz-stars {
+    background-color: #f43939;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 2px;
+}
+
+#biz-stars-unrev {
+    background-color: rgb(207, 207, 207);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 2px;
 }
 
 .biz-description {
-    width: 100%;
+    width: 400px;
 }
 
 .biz-category {
-    color: #666666;
-    font-size: 14px;
-    margin-bottom: 50px;
+    color: black;
+    font-size: 16px;
+    // margin-top: 0;
+}
+
+.biz-show-inner-map2 {
+    border: 1px solid #ccc;
+    width: 300px;
+    height: 270px;
+    border-radius: 4px;
+    margin-right: 35px;
+}
+
+.biz-category-span {
+    color:#666666;;
 }
 
 .biz-add-div {
     display: flex;
     flex-direction: column;
-    padding: 14px;
+    // padding: 14px;
+    margin-top: -2vh;
+    padding-bottom: 50px;
+}
+
+.biz-show-map {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    left: 0px;
+    background-color: #e5e3df;
+    border-bottom: 1px solid #ccc;
+}
+
+.biz-show-item {
+    overflow-y: scroll;
+}
+
+.biz-map-add-div {
+    // display: flex;
+    flex-direction: column;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.biz-map-address {
+    margin-top: -5px;
+    margin-left: 20px;
 }
 
 .biz-add-div > p {
     color: grey;
     font-size: 14px;
-    padding-bottom: 7px;
-    width: 85px;
+    width: 130px;
     text-align: center;
+    margin-bottom: -10px;
 }
-.biz-address {
-    margin-top: -15px;
-}
+// .biz-address {
+//     margin-top: -15px;
+// }
 .biz-results {
     font-size: 16px;
     padding-left: 20px;
@@ -228,6 +292,23 @@
 .biz-map {
     width: 500px;
     height: 500px;
+    position: sticky;
+    top: 125px;
+}
+
+.business-show-container-mid-hours > div {
+    display: flex;
+    justify-content: space-between;
+    margin: -10px;
+}
+
+.map-container {
+    width: 450px;
+    height: 530px;
+}
+
+#week {
+    font-weight: bold;
 }
 
 // .biz-img-map {
@@ -295,15 +376,16 @@
 .biz-show-name {
     font-size: 42px;
     font-weight: 900;
-    font-family: sans-serif;
+    margin-bottom: 5px;
+    font-family:'Poppins', sans-serif;;
 }
 .biz-show-side-info {
     width: 320px;
     border: 1px solid rgba(0,0,0,0.2);
     position: sticky;
     border-radius: 4px;
-    height: 134px;
-    top: 20px;
+    
+    top: 134px;
     float: right;
     padding-left: 5px;
     padding-right: 5px;
@@ -313,18 +395,15 @@
     color: #333333;
     vertical-align: middle;
     text-align: center;
-    margin-top: -39%;
+    margin-top: -35%;
 }
 
-// .biz-show-info {
-//     width: 610px;
-//     height: 170px;
-//     display: flex;
-//     float: left; 
-//     display: block;
-//     border-bottom: 1px solid rgba(0,0,0,0.2);
-
-// }
+.biz-show-info {
+    width: 620px;
+    height: 220px;
+    display: block;
+    border-bottom: 1px solid #a0a0a0;
+}
 
 .covid-19 {
     display: block;
@@ -338,6 +417,30 @@
     padding-top: 15px;
     margin-top: 25px;
     margin-bottom: 25px;    
+    border-left: 8px solid #0ab3c9;
+}
+
+.covid-19 {
+    display: block;
+    width: 560px;
+    background: #d0ecfb;
+    border-radius: 3px;
+    font-size: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;    
+    border-left: 8px solid #0ab3c9;
+}
+
+.covid-19-p1 {
+    font-weight: bold;
+}
+
+.covid-19-biz {
+    color: #0097ec;
 }
 
 
@@ -349,8 +452,8 @@
     border: 0;
     margin: 0;
     text-align: center;
-    padding: 17px;
-    box-shadow: 5px 0px 5px 6px #f0f0f0;
+    padding: 13px;
+    box-shadow: 3px 0px 3px 3px #f0f0f0;
 }
 
 .biz-show-inner-map {
@@ -361,14 +464,88 @@
     font-size: 20px;
     font-weight: 700;
     padding: 20px;
+    border-top: 1px solid #a0a0a0;
+    width: 582px;
+}
+
+.biz-show-location-map {
+    display: flex;
+    width: 610px;
+    height: fit-content;
+}
+
+.business-show-container-mid-hours {
+    width: 180px;
+    height: fit-content;
 }
 
 .biz-show-search-link {
     text-decoration: none;
     color: white;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 // .biz-show-img-map {
 //     width: 300px;
 //     height: 300px;
 // }
+
+.biz-show-rec-rev {
+    padding-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    margin-right: auto;
+    width: 630px;
+    border-top: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+    margin-left: 135px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.rec-rev-p {
+    margin-left: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.biz-show-rev-inner {
+    background-image: url(https://s3-media0.fl.yelpcdn.com/assets/public/empty_profile@2x.yelp-react-component-review.yji-f52f768da99ad105f2d4ad4190f25c31.png);
+    background-size: cover;
+    width: 148px;
+    height: 68px;
+}
+
+.biz-show-rev-outter {
+    width: 630px;
+    height: 150px;
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gray;
+    margin-left: 135px;
+}
+
+.biz-show-rev-start {
+    width: 450px;
+    text-align: center;
+    height: 85px;
+    line-height: 2;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    padding-top: 20px;
+    background-color: #f4f4f4;
+    margin-left: 40px;
+}
+
+// #temp-img {
+//     padding-bottom: 20px;
+// }
+
+.img-outter > img{
+    display: block;
+    margin-left: 200px;
+    margin-right: auto;
+    padding-bottom: 30px;
+}

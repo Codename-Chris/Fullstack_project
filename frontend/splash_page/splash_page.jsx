@@ -90,13 +90,13 @@ class SplashPage extends React.Component {
                             className="splash-input-2"
                         />
                     </label>
-                    <button type="submit" className="splash-but"><Link to="/businesses">Search</Link></button>
+                    <button type="submit" className="splash-but"><Link to="/search">Search</Link></button>
                 </form>
                 <div className="splash-sub-links">
-                    <a href='#/businesses' className="splash-sub-a">Resturants</a>
-                    <a href='#/businesses' className="splash-sub-a">Barbers</a>
-                    <a href='#/businesses' className="splash-sub-a">Home Services</a>
-                    <a href='#/businesses' className="splash-sub-a">Delivery</a>
+                    <a href='#/search' className="splash-sub-a">Resturants</a>
+                    <a href='#/search' className="splash-sub-a">Barbers</a>
+                    <a href='#/search' className="splash-sub-a">Home Services</a>
+                    <a href='#/search' className="splash-sub-a">Delivery</a>
                 </div>
                 <div className="splash-img-cred">
                     <div className="cred-link">
