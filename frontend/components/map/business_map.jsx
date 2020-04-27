@@ -1,11 +1,11 @@
 import React from 'react';
-import GoogleMapReact from 'google-map-react';
+// import GoogleMapReact from 'google-map-react';
 
 class BusinessMap extends React.Component {
     componentDidMount() {
         const mapOptions = {
-            center: { lat: 37.7758, lng: -122.435},
-            zoom: 13
+            center: { lat: 40.7579747, lng: -73.9877313},
+            zoom: 16
         };
         this.map = new google.maps.Map(this.mapNode, mapOptions);
     }

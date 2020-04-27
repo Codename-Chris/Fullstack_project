@@ -10,8 +10,9 @@ import SignUpContainer from './session/signup_container';
 import LogInContainer from './session/login_container';
 import BusinessShowContainer from './businesses/business_show_container'
 import BusinessesIndexContainer from './businesses/businesses_index_container'
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute} from '../util/route_util';
 import Welcome from '../splash_page/welcome'
+import ReviewFormContainer from './reviews/review_form_container'
 
 const App = () => (
     <div>
@@ -23,6 +24,7 @@ const App = () => (
             <Route exact path="/businesses" component={BusinessesIndexContainer} />
             <AuthRoute exact path="/login" component={LogInContainer} />
             <AuthRoute exact path="/signup" component={SignUpContainer} />
+            <ProtectedRoute exact path="/businesses/:id/reviews" component={ReviewFormContainer} />
             <Route exact path="/" component={Welcome}/>
         </Switch>
         <Footer />

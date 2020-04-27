@@ -8,14 +8,15 @@ const BusinessIndexItem = (props) => {
             <Link className="biz-pic" to={`/businesses/${props.business.id}`}><img className="biz-img-pic" src={props.business.photoUrls[0]}/></Link>
             <div className="biz-index-item-inner">
                 <Link className="biz-name" to={`/businesses/${props.business.id}`}>{props.business.name}</Link>
-                <p className="biz-rating">*****</p>
+                <p className="biz-rating">* * * * *</p>
                 <p className="biz-category">$$$ ~ {props.business.category}</p>
-                <p> phone number </p>
-                <p> more info </p>
+                {/* <p> more info </p> */}
+            <p className="biz-description"> {props.business.description} </p>
             </div>
             <div className="biz-add-div">
+                <p>({props.business.phone_number}) 767-8438</p>
                 <p>{props.business.address}</p>
-                <p className="biz-address">New York,NY</p>
+                <p className="biz-address">New York, NY</p>
             </div>
         </div>
     )
