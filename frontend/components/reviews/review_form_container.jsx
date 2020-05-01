@@ -8,21 +8,22 @@ import { fetchBusiness } from '../../actions/businesses_action'
 
 const msp = (state, ownProps) => {
     return {
-        // nav: <Link to="/signup">Sign Up</Link>,
-        // errors: state.errors.session,
-        // user: state.entities.users[state.session.id],
-        // business: state.entities.businesses[ownProps.match.params.id] ||
-        // {
-        //     title: "",
-        //     description: "",
-        //     longitude: 0,
-        //     latitude: 0,
-        //     address: "",
-        //     price: 0,
-        //     opening_hours: "",
-        //     closing_hours: "",
-        //     photoUrls: [],
-        // }
+        errors: state.errors.session,
+        user: state.entities.users[state.session.id],
+        business: state.entities.businesses[ownProps.match.params.businessId] ||
+        {
+            name: "",
+            category: "",
+            description: "",
+            lng: 0,
+            lat: 0,
+            address: "",
+            website: "",
+            phone_number: 0,
+            // opening_hours: "",
+            // closing_hours: "",
+            photoUrls: []
+        }
     }
 }
 

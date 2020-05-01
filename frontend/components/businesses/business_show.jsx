@@ -166,7 +166,10 @@ class BusinessShow extends React.Component {
                                 <i className="fas fa-star" id="biz-stars-unrev"/>
                                 <i className="fas fa-star" id="biz-stars-unrev" />
                             </div>
-                            <div>Start your review of <span className="biz-show-name-span">{this.props.business.name}</span></div>
+                            <div>Start your review of <span className="biz-show-name-span"><Link to={`/businesses/${this.props.business.id}/reviews`} className="biz-show-search-link2">
+                                {this.props.business.name}
+                            </Link></span></div>
+                            
                         </div>
                     {/* </div> */}
                     </div>  

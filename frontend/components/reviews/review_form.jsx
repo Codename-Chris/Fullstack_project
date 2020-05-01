@@ -7,58 +7,59 @@ import { Link, withRouter, Redirect } from 'react-router-dom';
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     body: '',
-        //     rating: 0,
-        //     business_id: "",
-        //     user_id: "",
-        // };
-        // this.handleSubmit = this.handleSubmit.bind(this);
+        this.state = {
+            review: '',
+            rating: 0,
+            business_id: "",
+            author_id: "",
+        };
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    // componentDidMount() {
-    //     this.props.fetchBusiness(this.props.match.params.id)
-    // }
+    componentDidMount() {
+        this.props.fetchBusiness(this.props.match.params.id)
+    }
 
 
-    // update(field) {
-    //     return e => this.setState({
-    //         [field]: e.target.value
-    //     });
-    // }
+    update(field) {
+        return e => this.setState({
+            [field]: e.target.value
+        });
+    }
 
-    // handleSubmit(e) {
-    //     e.preventDefault();
-    //     const review = {
-    //         body: this.state.body,
-    //         rating: this.state.rating,
-    //         user_id: this.props.user.id,
-    //         business_id: this.props.business.id,
+    handleSubmit(e) {
+        e.preventDefault();
+        const review = {
+            review: this.state.review,
+            rating: this.state.rating,
+            author_id: this.props.author.id,
+            business_id: this.props.business.id,
 
-    //     }
-    //     this.props.processReview(review).then(this.props.history.push(`/businesses/${this.props.match.params.id}`))
-    // }
+        }
+        this.props.processReview(review).then(this.props.history.push(`/businesses/${this.props.business.id}`))
+    }
 
 
 
-    // renderErrors() {
-    //     return (
-    //         <ul>
-    //             {this.props.errors.map((error, i) => (
-    //                 <li className="biggly-error-hours" key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li className="biggly-error-hours" key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
 
     render() {
         // if (!this.props.user) {
         //   <Redirect to="/login" />;
         // }
         return (
-            <>
+            <div>
+        
                 <header className="biz-index-header">
                     <div className="index-head">
                         <Link to="/" className="biz-header-link">
@@ -96,13 +97,21 @@ class ReviewForm extends React.Component {
                         </div>
                     </div>
                 </header>
-                <p>HI IM THE REVIEW FORM :)</p>
-                <form className="form1">
-                    <div>
-                        <div>
-                            Chris' Cronuts
+                {/* <div>
+                    {this.renderErrors}
+                </div> */}
+               
+    
+                <form className="form1" onSubmit={this.handleSubmit}>
+                    <Link className="rev-biz-name" to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
+                        <div className="fake-box">
+                        <div className="rev-form-rating-box">
+                        <input type="number" value={this.state.rating} className="rating-thingy" min="1" max="5" onChange={this.update("rating")} />
+                        <div className='rating-texty'> Select your rating </div>
                         </div>
-                        <div>
+                        <textarea className="review-text-body" id="" cols="30" rows="10" value={this.state.review} placeholder="Your review helps others learn about great local businesses! Please don't review this business if you recieved a freebie for writing this review, or if you're connected in any way to the owner or employees." onChange={this.update("review")}></textarea>
+                        <input type="submit" className="review-submit" value="Post Review"/>
+                        {/* <div>
                             <div>
                                 <i className="fas fa-star" id="biz-stars-unrev" />
                                 <i className="fas fa-star" id="biz-stars-unrev" />
@@ -110,12 +119,13 @@ class ReviewForm extends React.Component {
                                 <i className="fas fa-star" id="biz-stars-unrev" />
                                 <i className="fas fa-star" id="biz-stars-unrev" />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </form>
-                <img src="https://media0.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif?cid=ecf05e478702021b1b264ee821fb10a59133399882f5f9b9&rid=giphy.gif" alt="" />
+                {/* <img src="https://media0.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif?cid=ecf05e478702021b1b264ee821fb10a59133399882f5f9b9&rid=giphy.gif" alt="" /> */}
                 {/* <Footer /> */}
-            </>
+            
+            </div>
         );
     }
 };
