@@ -1,7 +1,7 @@
 export const fetchReviews = () => {
     return $.ajax({
-        method: "GET",
-        url: "/api/reviews"
+        url: `/api/businesses/${review.business_id}/reviews`,
+        method: "GET"
     });
 }
 
@@ -13,8 +13,9 @@ export const fetchReview = id => {
 }
 
 export const createReview = review => {
+    debugger
     return $.ajax({
-        url: "/api/reviews",
+        url: `/api/businesses/${review.business_id}/reviews`,
         method: "POST",
         data: { review }
     });
@@ -22,7 +23,7 @@ export const createReview = review => {
 
 export const editReview = review => {
     return $.ajax({
-        url: `/api/reviews/${review.id}`,
+        url: `/api/businesses/${review.business_id}/reviews/${id}`,
         method: "PATCH",
         data: { review }
     });
@@ -31,7 +32,7 @@ export const editReview = review => {
 export const deleteReview = id => {
     // debugger
     return $.ajax({
-        url: `/api/reviews/${id}`,
+        url: `/api/businesses/${review.business_id}/reviews/${id}`,
         method: "DELETE"
     });
 }

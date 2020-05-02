@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 // import { signup, login } from '../../util/session_api_util';
 
 class SessionForm extends React.Component {
@@ -13,6 +14,12 @@ class SessionForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
     };
+
+    componentWillUnmount() {
+        if (this.props.errors.length) {
+            this.props.clearErrors()
+        }
+    } 
 
     update(field) {
         return (e) => this.setState({ [field]: e.target.value});

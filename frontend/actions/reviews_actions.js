@@ -39,7 +39,7 @@ export const fetchReviews = () => dispatch =>
         ));
 
 export const fetchReview = id => dispatch =>
-    APIUtil.fetchReviews(id).then(review =>
+    APIUtil.fetchReview(id).then(review =>
         dispatch(receiveReviews(review)), err => dispatch(receiveErrors(err.responseJSON))
     );
 

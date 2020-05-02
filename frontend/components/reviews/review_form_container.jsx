@@ -7,23 +7,12 @@ import { fetchBusiness } from '../../actions/businesses_action'
 
 
 const msp = (state, ownProps) => {
+    // debugger
     return {
         errors: state.errors.session,
         user: state.entities.users[state.session.id],
-        business: state.entities.businesses[ownProps.match.params.businessId] ||
-        {
-            name: "",
-            category: "",
-            description: "",
-            lng: 0,
-            lat: 0,
-            address: "",
-            website: "",
-            phone_number: 0,
-            // opening_hours: "",
-            // closing_hours: "",
-            photoUrls: []
-        }
+        business: state.entities.businesses[ownProps.match.params.id] 
+
     }
 }
 

@@ -1,3 +1,27 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.rev-header {
+    background-color:#d32323;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    padding-bottom: -5px;
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    height: 100px;
+}
+
+.rev-header-link { 
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: black;
+    text-shadow: 3px 3px 0 #FFF, -3px 3px 0 #FFF, 3px -3px 0 #FFF, -3px -3px 0 #FFF;
+}
+
+.form1 {
+    text-align: center;
+}
