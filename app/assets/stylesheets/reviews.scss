@@ -25,3 +25,39 @@
 .form1 {
     text-align: center;
 }
+
+.rev-inner-box {
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.rev-form-rating-box {
+    display: flex;
+}
+
+.review-outter-container {
+    display: flex;
+    margin-left: 27%;
+    max-width: 960px;
+    padding: 0 15px;
+    padding-bottom: 30px;
+}
+
+.review-text-body {
+    resize: none;
+    border: none;
+    outline-color: white;
+    width: 500px;
+    margin-top: 15px;
+    font-size: 18px;
+    min-height: 250px;
+}
+
+.rev-biz-name {
+    float: left;
+    text-decoration: none;
+    font-weight: bold;
+    color: #0073bb;
+    font-size: 36px;
+}

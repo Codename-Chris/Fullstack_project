@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BusinessMap from '../map/business_map'
+import ReviewListItem from '../reviews/review_list_item'
 
 class BusinessShow extends React.Component {
     constructor(props) {
@@ -70,7 +71,7 @@ class BusinessShow extends React.Component {
                                     {/* </label> */}
                                 </div>
                                 <button type="submit" className="biz-but">
-                                    <Link to="/businesses" className="biz-search-link">
+                                    <Link to="/search" className="biz-search-link">
                                         Search
                                     </Link>
                                 </button>
@@ -174,8 +175,20 @@ class BusinessShow extends React.Component {
                     {/* </div> */}
                     </div>  
                     <div className="img-outter">
-                        <img src="https://media2.giphy.com/media/26gssvmflfcT0bmTe/giphy.gif?cid=ecf05e47d834345a3af1baa8599b229e72214f7e452b2879&rid=giphy.gif" alt=""/>
-                        <img src="https://media.giphy.com/media/26gsaKErbuJAD2L4I/giphy.gif" id="img"/>
+                        <div className="biz-rev-show">
+                                {this.props.reviews.map(review => {
+                                    
+                                    return <ReviewListItem 
+                                    key={review.id}
+                                    review={review}
+                                    author={this.props.users[review.author_id]}
+                                    user_id={this.props.user.id}
+                                    // deleteReview={this.props.deleteComment}
+                                    />})}
+                                
+                        </div>
+                        {/* <img src="https://media2.giphy.com/media/26gssvmflfcT0bmTe/giphy.gif?cid=ecf05e47d834345a3af1baa8599b229e72214f7e452b2879&rid=giphy.gif" alt=""/>
+                        <img src="https://media.giphy.com/media/26gsaKErbuJAD2L4I/giphy.gif" id="img"/> */}
                     </div>
                 </div>
             </div>

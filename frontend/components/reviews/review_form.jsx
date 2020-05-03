@@ -53,9 +53,6 @@ class ReviewForm extends React.Component {
     }
 
     render() {
-        // if (!this.props.user) {
-        //   <Redirect to="/login" />;
-        // }
         return (
             <div>
             <>
@@ -66,29 +63,30 @@ class ReviewForm extends React.Component {
                         </Link>
                     </div>
                 </header>
-                <div></div>
+                    {this.renderErrors()}
+                <div className="review-outter-container">
                
-                {this.renderErrors()}
-                <form className="form1" onSubmit={this.handleSubmit}>
-                    <Link className="rev-biz-name" to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
-                        <div className="fake-box">
-                        <div className="rev-form-rating-box">
-                        <input type="number" value={this.state.rating} className="rating-thingy" min="1" max="5" onChange={this.update("rating")} />
-                                <div className='rating-texty'> Select your rating     </div>
-                        </div>
-                        <textarea className="review-text-body" id="" cols="30" rows="10" value={this.state.review} placeholder="Your review helps others learn about great local businesses! Please don't review this business if you recieved a freebie for writing this review, or if you're connected in any way to the owner or employees." onChange={this.update("review")}></textarea>
-                        {/* <div>
-                            <div>
-                            <i className="fas fa-star" id="biz-stars-unrev" />
-                            <i className="fas fa-star" id="biz-stars-unrev" />
-                            <i className="fas fa-star" id="biz-stars-unrev" />
-                            <i className="fas fa-star" id="biz-stars-unrev" />
-                            <i className="fas fa-star" id="biz-stars-unrev" />
+                    <form className="form1" onSubmit={this.handleSubmit}>
+                        <Link className="rev-biz-name" to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
+                            <div className="rev-inner-box">
+                            <div className="rev-form-rating-box">
+                            <input type="number" value={this.state.rating} className="rating-thingy" min="1" max="5" onChange={this.update("rating")} />
+                                    <div className='rating-texty'> Select your rating     </div>
                             </div>
-                        </div> */}
-                    </div>
-                        <input type="submit" className="review-submit" value="Post Review"/>
-                </form>
+                            <textarea className="review-text-body" id="" cols="30" rows="10" value={this.state.review} placeholder="Your review helps others learn about great local businesses! Please don't review this business if you recieved a freebie for writing this review, or if you're connected in any way to the owner or employees." onChange={this.update("review")}></textarea>
+                            {/* <div>
+                                <div>
+                                <i className="fas fa-star" id="biz-stars-unrev" />
+                                <i className="fas fa-star" id="biz-stars-unrev" />
+                                <i className="fas fa-star" id="biz-stars-unrev" />
+                                <i className="fas fa-star" id="biz-stars-unrev" />
+                                <i className="fas fa-star" id="biz-stars-unrev" />
+                                </div>
+                            </div> */}
+                        </div>
+                            <input type="submit" className="review-submit" value="Post Review"/>
+                    </form>
+                </div>
                 {/* <img src="https://media0.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif?cid=ecf05e478702021b1b264ee821fb10a59133399882f5f9b9&rid=giphy.gif" alt="" /> */}
                 {/* <Footer /> */}
             </>
