@@ -30,8 +30,6 @@ class SplashPage extends React.Component {
             <header className="splash-header">
                 <div className="splash-left-links">
                     <a href="#" className="splash-a">Write a Review</a>
-                    <a href="https://github.com/Codename-Chris" className="splash-a">Github</a>
-                    <a href="https://www.linkedin.com/in/christopher-garthright/" className="splash-a">LinkedIn</a>
                 </div>
                 <div className="splash-right-links">
                     <Link to="/login" className="splash-r-l">Log In</Link>
@@ -44,8 +42,8 @@ class SplashPage extends React.Component {
                 <header className="splash-header">
                     <div className="splash-left-links">
                         <a href="#" className="splash-a">Write a Review</a>
-                        <a href="https://github.com/Codename-Chris" className="splash-a">Github</a>
-                        <a href="https://www.linkedin.com/in/christopher-garthright/" className="splash-a">LinkedIn</a>
+                        {/* <a href="https://github.com/Codename-Chris" className="splash-a">Github</a>
+                        <a href="https://www.linkedin.com/in/christopher-garthright/" className="splash-a">LinkedIn</a> */}
                     </div>
                     <div className="splash-right-links">
                         <button className="splash-signout" onClick={this.props.logout}>Log Out</button>
@@ -90,13 +88,13 @@ class SplashPage extends React.Component {
                             className="splash-input-2"
                         />
                     </label>
-                    <button type="submit" className="splash-but"><Link to="/search">Search</Link></button>
+                    <button type="submit" className="splash-but"><Link to="/search"><i className="fas fa-search" id="search-img"></i></Link></button>
                 </form>
                 <div className="splash-sub-links">
-                    <a href='#/search' className="splash-sub-a">Resturants</a>
-                    <a href='#/search' className="splash-sub-a">Barbers</a>
-                    <a href='#/search' className="splash-sub-a">Home Services</a>
-                    <a href='#/search' className="splash-sub-a">Delivery</a>
+                    <a href="https://github.com/Codename-Chris" className="splash-sub-a"><i className="fab fa-github"></i> Github</a>
+                    <a href="https://www.linkedin.com/in/christopher-garthright/" className="splash-sub-a"><i className="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://angel.co/christopher-garthright" className="splash-sub-a"><i className="fab fa-angellist"></i> AngelList</a>
+                    {/* <a href='#/search' className="splash-sub-a">Delivery</a> */}
                 </div>
                 <div className="splash-img-cred">
                     <div className="cred-link">

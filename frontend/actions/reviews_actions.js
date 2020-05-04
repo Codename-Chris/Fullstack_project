@@ -33,8 +33,8 @@ export const receiveErrors = errors => {
     };
 };
 
-export const fetchReviews = () => dispatch =>
-    APIUtil.fetchReviews().then(reviews =>
+export const fetchReviews = (businessId) => dispatch =>
+    APIUtil.fetchReviews(businessId).then(reviews =>
         dispatch(receiveReviews(reviews)), err => dispatch(receiveErrors(err.responseJSON)
         ));
 
@@ -53,7 +53,7 @@ export const editReview = id => dispatch =>
         dispatch(receiveReview(review)), err => dispatch(receiveErrors(err.responseJSON))
     );
 
-export const deleteReview = reviewId => dispatch =>
-    APIUtil.deleteReview(reviewId).then(review =>
-        dispatch(removeReview(reviewId)), err => dispatch(receiveErrors(err.responseJSON))
+export const deleteReview = review => dispatch =>
+    APIUtil.deleteReview(review).then(review =>
+        dispatch(removeReview(review)), err => dispatch(receiveErrors(err.responseJSON))
     );

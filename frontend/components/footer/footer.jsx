@@ -13,8 +13,9 @@ export default () => {
                 <div className="footer-content-item">
                     <h3>Discover More</h3>
                     <ul>
-                        <li><a href="https://www.linkedin.com/in/christopher-garthright/">LinkedIn</a></li>
-                        <li><a href="https://github.com/Codename-Chris">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/christopher-garthright/"><i className="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/Codename-Chris"><i className="fab fa-github"></i> Github</a></li>
+                        <li><a href="https://angel.co/christopher-garthright" ><i className="fab fa-angellist"></i> AngelList</a></li>
                     </ul>
                 </div>
             </div>

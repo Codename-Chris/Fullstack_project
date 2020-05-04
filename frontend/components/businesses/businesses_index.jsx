@@ -64,7 +64,7 @@ class BusinessesIndex extends React.Component {
                                 </div>
                                 <button type="submit" className="biz-but">
                                     <Link to="/search" className="biz-search-link">
-                                        Search
+                                        <i className="fas fa-search" id="search-img"></i>
                                     </Link>
                                 </button>
                                 

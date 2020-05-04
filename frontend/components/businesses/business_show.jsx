@@ -10,14 +10,23 @@ class BusinessShow extends React.Component {
 
     componentDidMount() {
     //    debugger
-       if (!this.props.business) {
-        //    debugger
         this.props.fetchBusiness(parseInt(this.props.match.params.businessId))
-        this.render();
-        // if (this.props.currentUser) {
-        //     this.props.fetchUser(this.props.currentUser.id);
-        }
     }
+
+    // componentDidUpdate() {
+    //     if (!this.props.business) {
+    //         //    debugger
+    //         this.props.fetchBusiness(parseInt(this.props.match.params.businessId))
+
+    //         // if (this.props.currentUser) {
+    //         //     this.props.fetchUser(this.props.currentUser.id);
+    //     }
+
+    // }
+
+    // componentwillUpdate() {
+    //     this.props.fetchBusiness(parseInt(this.props.match.params.businessId))
+    // }
 
     update(field) {
         return e => this.setState({
@@ -72,7 +81,7 @@ class BusinessShow extends React.Component {
                                 </div>
                                 <button type="submit" className="biz-but">
                                     <Link to="/search" className="biz-search-link">
-                                        Search
+                                        <i className="fas fa-search" id="search-img"></i>
                                     </Link>
                                 </button>
 
@@ -182,7 +191,7 @@ class BusinessShow extends React.Component {
                                     key={review.id}
                                     review={review}
                                     author={this.props.users[review.author_id]}
-                                    user_id={this.props.user.id}
+                                    // user_id={this.props.user.id}
                                     // deleteReview={this.props.deleteComment}
                                     />})}
                                 

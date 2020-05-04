@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchBusiness } from '../../actions/businesses_action'
 import { fetchUsers } from '../../actions/users_action'
-import { deleteReview }from '../../actions/reviews_actions'
+import { fetchReviews,deleteReview }from '../../actions/reviews_actions'
 import BusinessShow from './business_show'
 
 const mapStateToProps = (state, ownProps) => {

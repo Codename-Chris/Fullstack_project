@@ -1,19 +1,19 @@
-export const fetchReviews = () => {
+export const fetchReviews = (businessId) => {
     return $.ajax({
-        url: `/api/businesses/${review.business_id}/reviews`,
+        url: `/api/businesses/${businessId}/reviews`,
         method: "GET"
     });
 }
 
-export const fetchReview = id => {
+export const fetchReview = review => {
     return $.ajax({
         method: "GET",
-        url: `/api/reviews/${id}`
+        url: `/api/businesses/${review.businessId}/'reviews/${review.id}`
     });
 }
 
 export const createReview = review => {
-    debugger
+    // debugger
     return $.ajax({
         url: `/api/businesses/${review.business_id}/reviews`,
         method: "POST",
@@ -29,10 +29,10 @@ export const editReview = review => {
     });
 }
 
-export const deleteReview = id => {
+export const deleteReview = review => {
     // debugger
     return $.ajax({
-        url: `/api/businesses/${review.business_id}/reviews/${id}`,
+        url: `/api/businesses/${review.business_id}/reviews/${review.id}`,
         method: "DELETE"
     });
 }

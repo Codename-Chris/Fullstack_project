@@ -12,6 +12,13 @@
 
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google[:api_key]}" %>
     
+    <% if logged_in? %>
+
+      <script id="bootstrap-current-user" type="text/javascript">
+          window.currentUser = <%= render("api/users/user.json.jbuilder",
+              user: current_user).html_safe %>
+      </script>
+    <% end %>
     
  
   </head>
@@ -23,6 +30,9 @@
   window.diner1 = '<%= image_url('diner1.jpg') %>'
   window.cronut1 = '<%= image_url('cronut1.jpg') %>' 
   </script>
+
+
+  
   
   
 

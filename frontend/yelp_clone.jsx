@@ -8,14 +8,18 @@ import Root from './components/root'
 document.addEventListener("DOMContentLoaded", () => {
   let store;
   if (window.currentUser) {
+    const { currentUser } = window;
+    const { id } = currentUser;
     const preloadedState = {
       entities: {
-        users: { [window.currentUser.id]: window.currentUser }
+        users: {
+          [id]: currentUser
+        }
       },
-      session: { id: window.currentUser.id }
+      session: { id }
     };
     store = configureStore(preloadedState);
-    delete window.currentUser;
+    // delete window.currentUser;
   } else {
     store = configureStore();
   }
@@ -24,4 +28,4 @@ document.addEventListener("DOMContentLoaded", () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.currentUser = store.currentUser;
-});
+});  
