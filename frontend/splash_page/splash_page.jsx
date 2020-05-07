@@ -4,9 +4,14 @@ import { Link } from 'react-router-dom';
 class SplashPage extends React.Component {
     constructor (props) {
         super(props)
+        this.state = { 
+            find: "",
+            near: ""
+        }
         this.handleLogOut = this.handleLogOut.bind(this)    
         this.getLinks = this.getLinks.bind(this)
         // this.update = this.update.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     componentDidUpdate() {
         this.getLinks()
@@ -16,6 +21,10 @@ class SplashPage extends React.Component {
         return e => this.setState({
             [field]: e.currentTarget.value
         })
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
     }
     
     handleLogOut(e) {
@@ -54,6 +63,10 @@ class SplashPage extends React.Component {
     }
 
     render() {
+        let search = `/businesses/search/${this.state.find}`;
+        if (this.state.find === "") {
+            search = `/businesses`
+        }
         return (
             <div className="all-splash">
                 {/* <header className="splash-header">
@@ -69,12 +82,13 @@ class SplashPage extends React.Component {
                 </header> */}
                 {this.getLinks()}
                 <a href="#" className="splash-a-h1"><h1>Celp <img src="https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_styleguide/dcb526e86d86/assets/img/logos/burst_desktop_xsmall_outline@2x.png" className="header-logo" /></h1></a>
-                <form className="splash-form">
+                <form className="splash-form" onSubmit={this.handleSubmit}>
                     <label className="splash-label">
                         <span className="splash-span">Find</span>
                         <input 
                         type="text" 
-                        onChange={this.update} 
+                        value={this.state.find}
+                        onChange={this.update("find")} 
                         placeholder="burgers,barbers,plumbers..."
                         className="splash-input"
                         />
@@ -83,12 +97,13 @@ class SplashPage extends React.Component {
                         <span className="splash-span-2">Near</span>
                         <input
                             type="text"
-                            onChange={this.update}
+                            value={this.state.near}
+                            onChange={this.update("near")}
                             placeholder="New York, NY"
                             className="splash-input-2"
                         />
                     </label>
-                    <button type="submit" className="splash-but"><Link to="/search"><i className="fas fa-search" id="search-img"></i></Link></button>
+                    <button type="submit" className="splash-but"><Link to={search}><i className="fas fa-search" id="search-img"></i></Link></button>
                 </form>
                 <div className="splash-sub-links">
                     <a href="https://github.com/Codename-Chris" className="splash-sub-a"><i className="fab fa-github"></i> Github</a>
