@@ -92,3 +92,8 @@ biz4.photos.attach(io: cafe1, filename: 'cafe1.jpg')
 bar1 = File.open(Rails.root.join('app', 'assets', 'images', 'bar1.jpg'))
 biz5.photos.attach(io: bar1, filename: 'bar1.jpg') 
 
+
+
+
+
+
