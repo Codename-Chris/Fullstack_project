@@ -8,11 +8,18 @@ import BusinessMap from '../map/business_map';
 class BusinessesIndex extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            find: this.props.find,
+            near: "",
+            businesses: this.props.businesses
+        }
         this.handleSubmit = this.handleSubmit.bind(this);
     };
 
     update(field) {
-        return (e) => this.setState({ [field]: e.target.value });
+        return (e) => this.setState({ [field]: e.target.value,
+            businesses: this.props.businesses.filter((biz) => biz.name.toLowerCase().includes(e.target.value.toLowerCase()))
+         });
     };
 
     handleSubmit(e) {
@@ -23,10 +30,20 @@ class BusinessesIndex extends React.Component {
     componentDidMount() {
         // debugger
         this.props.fetchBusinesses()
+        .then(() => this.setState({ 
+            businesses: this.props.businesses.filter((biz) => biz.name.toLowerCase().includes(this.state.find.toLowerCase()))
+        }))
     }
 
     render() {
         // debugger
+        let searchy = `/businesses/search/${this.state.find}`;
+        if (this.state.find === "") {
+            searchy = `/businesses/`
+        }
+
+        let businessList = Object.values(this.state.businesses).length === 0 ? this.props.businesses : this.state.businesses;
+        
         return (
             // <div>
             //     <header>
@@ -48,7 +65,8 @@ class BusinessesIndex extends React.Component {
                                         <input 
                                         type="text"
                                         placeholder="tacos,cheap dinner,drinks...."
-                                        onChange={this.update}
+                                        value={this.state.find}
+                                        onChange={this.update("find")}
                                         className="biz-find-search"
                                         />
                                     {/* </label> */}
@@ -58,12 +76,14 @@ class BusinessesIndex extends React.Component {
                                         <input 
                                         type="text"
                                         placeholder="New York, NY"
+                                        value={this.state.near}
+                                        onChange={this.update("near")}
                                         className="biz-near-search"
                                         />
                                     {/* </label> */}
                                 </div>
                                 <button type="submit" className="biz-but">
-                                    <Link to="/search" className="biz-search-link">
+                                    <Link to={searchy} className="biz-search-link">
                                         <i className="fas fa-search" id="search-img"></i>
                                     </Link>
                                 </button>
@@ -78,10 +98,10 @@ class BusinessesIndex extends React.Component {
                     <div className="biz-div-box2">
                         <div className="biz-box">
                             <h2 className="biz-results"> All Results</h2>
-                            {this.props.businesses.map(business => (
-                               <BusinessIndexItem 
-                                    business={business} 
-                                    key={business.id} 
+                            { businessList.map(business => (
+                                <BusinessIndexItem
+                                    business={business}
+                                    key={business.id}
                                 /> 
                             ))}
                         </div>

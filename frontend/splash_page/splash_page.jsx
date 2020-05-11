@@ -17,9 +17,14 @@ class SplashPage extends React.Component {
         this.getLinks()
     }
 
+    // componentDidMount() {
+    //     this.props.fetchUsers();
+    //     this.props.fetchBusinesses();
+    // }
+
     update(field) {
         return e => this.setState({
-            [field]: e.currentTarget.value
+            [field]: e.target.value
         })
     }
 
@@ -63,9 +68,10 @@ class SplashPage extends React.Component {
     }
 
     render() {
-        let search = `/businesses/search/${this.state.find}`;
+        // debugger
+        let searchy = `/businesses/search/${this.state.find}`;
         if (this.state.find === "") {
-            search = `/businesses`
+            searchy = `/businesses`
         }
         return (
             <div className="all-splash">
@@ -103,7 +109,7 @@ class SplashPage extends React.Component {
                             className="splash-input-2"
                         />
                     </label>
-                    <button type="submit" className="splash-but"><Link to={search}><i className="fas fa-search" id="search-img"></i></Link></button>
+                    <button type="submit" className="splash-but"><Link to={searchy}><i className="fas fa-search" id="search-img"></i></Link></button>
                 </form>
                 <div className="splash-sub-links">
                     <a href="https://github.com/Codename-Chris" className="splash-sub-a"><i className="fab fa-github"></i> Github</a>

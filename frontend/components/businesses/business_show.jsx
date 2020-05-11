@@ -6,6 +6,12 @@ import ReviewListItem from '../reviews/review_list_item'
 class BusinessShow extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            find: "",
+            near: "",
+            user_id: ""
+        }
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
@@ -40,8 +46,9 @@ class BusinessShow extends React.Component {
 
     render() {
         // debugger
-        if (!this.props.business) {
-            return <></> 
+        let searchy = `/businesses/search/${this.state.find}`;
+        if (this.state.find === "") {
+            searchy = `/businesses/`
         }
         return (
             // <div>
@@ -65,7 +72,8 @@ class BusinessShow extends React.Component {
                                     <input
                                         type="text"
                                         placeholder="tacos, cheap dinner, drinks...."
-                                        onChange={this.update}
+                                        value={this.state.find}
+                                        onChange={this.update("find")}
                                         className="biz-find-search"
                                     />
                                     {/* </label> */}
@@ -75,12 +83,13 @@ class BusinessShow extends React.Component {
                                     <input
                                         type="text"
                                         placeholder="New York, NY"
+                                        onChange={this.update("near")}
                                         className="biz-near-search"
                                     />
                                     {/* </label> */}
                                 </div>
                                 <button type="submit" className="biz-but">
-                                    <Link to="/search" className="biz-search-link">
+                                    <Link to={searchy} className="biz-search-link">
                                         <i className="fas fa-search" id="search-img"></i>
                                     </Link>
                                 </button>

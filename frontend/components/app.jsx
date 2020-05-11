@@ -22,7 +22,7 @@ const App = () => (
         <Switch>
             <Route exact path="/businesses/:businessId" component={BusinessShowContainer} />
             <Route exact path="/businesses" component={BusinessesIndexContainer} />
-            <Route exact path="/search" component={BusinessesIndexContainer} />
+            <Route exact path="/businesses/search/:query" component={BusinessesIndexContainer} />
             <AuthRoute exact path="/login" component={LogInContainer} />
             <AuthRoute exact path="/signup" component={SignUpContainer} />
             <ProtectedRoute exact path="/businesses/:id/reviews" component={ReviewFormContainer} />

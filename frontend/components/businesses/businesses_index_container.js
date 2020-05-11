@@ -3,9 +3,10 @@ import BusinessesIndex from "./businesses_index";
 import { fetchBusinesses } from "../../actions/businesses_action"
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
-        businesses: Object.values(state.entities.businesses)
+        businesses: Object.values(state.entities.businesses),
+        find: ownProps.match.params.query || "",
     };
 };
 
