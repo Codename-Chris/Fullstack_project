@@ -120,7 +120,7 @@ class SplashPage extends React.Component {
                 <div className="splash-img-cred">
                     <div className="cred-link">
                         <div className="cred-des">   
-                            <a href="#/businesses" className="photo-des">
+                            <a href="#/businesses/search/chris" className="photo-des">
                                 <p className="cred-text-1">Chris' Cronuts</p>
                             </a>
                         </div>

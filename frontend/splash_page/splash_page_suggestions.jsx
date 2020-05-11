@@ -20,7 +20,7 @@ const SplashSuggestions = (props) => {
                     <div><p>Resturants</p></div>
                 </div>
                 <div className="category" >
-                    <a href="#/businesses/search/bars"><img src="https://images.unsplash.com/photo-1528907061761-f2aa74665321?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"></img></a>
+                    <a href="#/businesses/search/bar"><img src="https://images.unsplash.com/photo-1528907061761-f2aa74665321?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"></img></a>
                     <div><p>Bars</p></div>
                 </div>
                 <div className="category" >
