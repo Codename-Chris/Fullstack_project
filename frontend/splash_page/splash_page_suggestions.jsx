@@ -24,12 +24,12 @@ const SplashSuggestions = (props) => {
                     <div><p>Bars</p></div>
                 </div>
                 <div className="category" >
-                    <a href="#/businesses/search/hotels"><img src="https://images.unsplash.com/photo-1454388683759-ee76c15fee26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" /></a> 
-                    <div><p>Hotels</p></div>
+                    <a href="#/businesses/search/cafe"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="" /></a> 
+                    <div><p>Cafe</p></div>
                 </div>
                 <div className="category" >
-                    <a href="#/businesses/search/dentists"><img src="https://images.unsplash.com/photo-1564420042700-a64e34a54c1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"></img></a>
-                    <div><p>Dentists</p></div>
+                    <a href="#/businesses/search/pizza"><img src="https://media-cdn.tripadvisor.com/media/photo-s/07/5e/ee/77/lotsa-pepperoni.jpg"></img></a>
+                    <div><p>Pizza</p></div>
                 </div>
             </div>
         </div>
