@@ -97,3 +97,10 @@ biz5.photos.attach(io: bar1, filename: 'bar1.jpg')
 
 
 
+
+
+
+
+
+
+

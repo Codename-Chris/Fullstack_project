@@ -43,7 +43,7 @@ class SplashPage extends React.Component {
             return (
             <header className="splash-header">
                 <div className="splash-left-links">
-                    <a href="#" className="splash-a">Write a Review</a>
+                    <a href="#/businesses" className="splash-a">Write a Review</a>
                 </div>
                 <div className="splash-right-links">
                     <Link to="/login" className="splash-r-l">Log In</Link>
