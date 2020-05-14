@@ -33,6 +33,7 @@ class BusinessesIndex extends React.Component {
         .then(() => this.setState({ 
             businesses: this.props.businesses.filter((biz) => biz.name.toLowerCase().includes(this.state.find.toLowerCase()))
         }))
+        this.props.fetchUsers()
     }
 
     render() {

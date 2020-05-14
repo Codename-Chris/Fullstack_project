@@ -9,7 +9,7 @@ const BusinessesReducer = (oldState = {}, action) => {
     let newState = Object.assign({}, oldState)
     switch (action.type) {
         case RECEIVE_BUSINESSES:
-            return action.businesses;
+            return action.businesses.businesses;
         case RECEIVE_BUSINESS:
             // debugger
             return Object.assign(

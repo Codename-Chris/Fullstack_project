@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { formatDate } from '../../util/date_util';
 
 
 
@@ -14,18 +15,19 @@ const ReviewListItem = (props) => {
     //     } else { return <img className="placeholder-prof-pic" src={props.author.prof_pic} /> }
     // }
 
-    // const gone = () => {
-    //     debugger
+    const deleted = () => {
+       
 
-    //     if (props.user_id != undefined && props.user_id === props.author.id) {
-    //         if (props.review) {
-    //             let review = props.review;
-    //             return <button className="header-logout-button" onClick={() => this.props.deleteReview(review).bind(this)}>delete</button>
-    //         }
-    //     }
-    // }
+        if (props.user_id != undefined && props.user_id === props.author.id) {
+            if (props.review) {
+                let review = props.review;
+                return <button className="header-logout-button" onClick={() => props.deleteReview(review)}>delete</button>
+            }
+        } 
+    }
 
     const gone = () => {
+    
         if ( (props.review.rating) === 5) {
             return (
                 <div>
@@ -79,7 +81,7 @@ const ReviewListItem = (props) => {
 
 
 
-    
+    console.log(props.author)
 
     return ( <div className="review-index-box2">
         {/* <p>REVIEW LIST ITEM</p> */}
@@ -87,18 +89,23 @@ const ReviewListItem = (props) => {
         {/* <Footer /> */}
         <div className="review-list-item-leftest-side" >
             <img src="https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_styleguide/514f6997a318/assets/img/default_avatars/user_60_square.png" alt=""/>
-            {/* {gone()} */}
+            {deleted()}
 
         </div>
         <div className="review-list-item-left-side">
             <div className="review-name-list">{props.author.username}</div>
-            <div className="review-location-list">New York, New York</div>
-            
-            <div className="amount-reviews-list">  <i className="fas fa-star" id="rev-stars" /> {props.review.rating.length} Reviews </div>
+            {/* <div className="review-location-list">New York, New York</div> */}
+            <div className="review-friends-list">
+                <i className="fas fa-female" id="rev-friends" /> 
+                <i className="fas fa-male" id="rev-friends" />
+                   {props.review.rating.length} friends
+            </div>
+            <div className="amount-reviews-list">  <i className="fas fa-star" id="rev-stars" /> {props.review.rating.length} reviews </div>
         </div>
         <div className="review-list-item-right-side">
             {/* <div className="review-rating-list">{props.review.rating} </div> */}
-            <div>{gone()}</div>
+            <div className="rev-date">{formatDate(props.review.created_at)} </div>
+            <div className="rev-gone">{gone()}</div>
             <div className="review-body-list">{props.review.review}</div>
         </div>
     </div>

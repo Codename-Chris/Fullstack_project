@@ -83,6 +83,11 @@
 .review-list-item-left-side {
     padding-left: 10px;
     text-align: center;
+    width: 150px;
+}
+
+.review-list-item-leftest-side {
+    width: 35px;
 }
 
 .review-name-list {
@@ -100,7 +105,11 @@
 // }
 
 #rev-stars {
-    color: orange;
+    color: white;
+    border: 1px solid #f15c00;
+    background-color: #f15c00;
+    padding: 1px;
+    border-radius: 2px;
 }
 
 .review-rating-list {
@@ -119,3 +128,30 @@
 .review-body-list {
     padding-top: 10px;
 }
+
+.review-location-list {
+    padding-bottom: 5px;
+}
+
+#rev-friends {
+    color: #f15c00;
+    padding-right: 5px;
+}
+
+#rev-friends > i {
+    padding-right: 5px;
+}
+
+.review-friends-list {
+    color: #666;
+}
+
+.amount-reviews-list {
+    color: #666;
+}
+
+.rev-date {
+    color: #666;
+    
+}
+ 

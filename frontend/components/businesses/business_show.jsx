@@ -17,7 +17,9 @@ class BusinessShow extends React.Component {
     componentDidMount() {
     //    debugger
         this.props.fetchBusiness(parseInt(this.props.match.params.businessId))
+        
     }
+
 
     // componentDidUpdate() {
     //     if (!this.props.business) {
@@ -30,9 +32,9 @@ class BusinessShow extends React.Component {
 
     // }
 
-    // componentwillUpdate() {
-    //     this.props.fetchBusiness(parseInt(this.props.match.params.businessId))
-    // }
+    componentwillUpdate() {
+        this.props.fetchBusiness(parseInt(this.props.match.params.businessId))
+    }
 
     update(field) {
         return e => this.setState({
@@ -44,12 +46,112 @@ class BusinessShow extends React.Component {
         e.preventDefault();
     }
 
+    // getStars() {
+    //     if ((this.props.reviews.rating )=== 5) {
+    //         return (
+    //             <p className="biz-rating">
+    //                 <i className="fas fa-star" id="biz-stars" />
+    //                 <i className="fas fa-star" id="biz-stars" />
+    //                 <i className="fas fa-star" id="biz-stars" />
+    //                 <i className="fas fa-star" id="biz-stars" />
+    //                 <i className="fas fa-star" id="biz-stars" />
+    //                 {this.props.reviews.length} Reviews
+    //             </p>
+    //         )
+    //     } else if ((this.props.reviews.rating) === 4) { 
+    //         return (
+                // <p className="biz-rating">
+                //     <i className="fas fa-star" id="biz-stars" />
+                //     <i className="fas fa-star" id="biz-stars" />
+                //     <i className="fas fa-star" id="biz-stars" />
+                //     <i className="fas fa-star" id="biz-stars" />
+                //     <i className="fas fa-star" id="biz-stars" />
+                //     {this.props.reviews.length} Reviews
+                // </p>
+    //         )
+    //     }
+    // }
+
     render() {
         // debugger
         let searchy = `/businesses/search/${this.state.find}`;
         if (this.state.find === "") {
             searchy = `/businesses/`
         }
+
+        const ratings = this.props.reviews.map(review => {
+            return review.rating
+        });
+
+        let totalRatings;
+        if (this.props.reviews.length === 0){
+            totalRatings = null;
+        } else {
+            totalRatings = ratings.reduce((a,b) => {
+                return a + b;
+
+            });
+            console.log(totalRatings)
+        }
+
+        const ratingAvg = Math.round((totalRatings/this.props.reviews.length))
+
+        const getStars = () => {
+            if (ratingAvg === 5) {
+                return (
+                    <p className="biz-rating">
+                        <i className="fas fa-star" id="biz-stars" />
+                        <i className="fas fa-star" id="biz-stars" />
+                        <i className="fas fa-star" id="biz-stars" />
+                        <i className="fas fa-star" id="biz-stars" />
+                        <i className="fas fa-star" id="biz-stars" />
+                        {this.props.reviews.length} Reviews
+                    </p>
+                )
+            } else if (ratingAvg === 4) {
+                return (
+                <p className="biz-rating">
+                    <i className="fas fa-star" id="biz-stars" />
+                    <i className="fas fa-star" id="biz-stars" />
+                    <i className="fas fa-star" id="biz-stars" />
+                    <i className="fas fa-star" id="biz-stars" />
+                    {this.props.reviews.length} Reviews
+                </p>
+                )
+            } else if (ratingAvg === 3) {
+                return (
+                    <p className="biz-rating">
+                        <i className="fas fa-star" id="biz-stars" />
+                        <i className="fas fa-star" id="biz-stars" />
+                        <i className="fas fa-star" id="biz-stars" />
+                        {this.props.reviews.length} Reviews
+                    </p>
+                )
+            } else if (ratingAvg === 2) {
+                return (
+                    <p className="biz-rating">
+                        <i className="fas fa-star" id="biz-stars" />
+                        <i className="fas fa-star" id="biz-stars" />
+                        {this.props.reviews.length} Reviews
+                    </p>
+                )
+            } else if (ratingAvg === 1) {
+                return (
+                    <p className="biz-rating">
+                        <i className="fas fa-star" id="biz-stars" />
+                        {this.props.reviews.length} Reviews
+                    </p>
+                )
+            } else {
+                return (
+                    <p className="biz-rating">
+                        <i className="fas fa-star" id="biz-stars" />
+                        {this.props.reviews.length} Reviews
+                    </p>
+                )
+            }
+        }
+
         return (
             // <div>
             //     <header>
@@ -112,14 +214,15 @@ class BusinessShow extends React.Component {
                             <div className="biz-show-info">
                                 {/* <Link className="biz-name" to={`/businesses/${props.business.id}`}>{props.business.name}</Link> */}
                                 <p className="biz-show-name"> {this.props.business.name} </p>
-                                <p className="biz-rating">
+                                {getStars()}
+                                {/* <p className="biz-rating">
                                     <i className="fas fa-star" id="biz-stars" />
                                     <i className="fas fa-star" id="biz-stars" />
                                     <i className="fas fa-star" id="biz-stars" />
                                     <i className="fas fa-star" id="biz-stars" />
                                     <i className="fas fa-star" id="biz-stars" />
                                     {this.props.reviews.length} Reviews
-                                </p>
+                                </p> */}
                                 {/* <p> {this.props.business.description} </p> */}
                                 <p className="biz-category">$$ <span className="biz-category-span"> • {this.props.business.category}</span></p>
                                 <button type="submit" className="biz-show-but">
@@ -201,8 +304,8 @@ class BusinessShow extends React.Component {
                                     key={review.id}
                                     review={review}
                                     author={this.props.users[review.author_id]}
-                                    // user_id={this.props.user.id}
-                                    // deleteReview={this.props.deleteComment}
+                                    user_id={this.props.user_id}
+                                    deleteReview={this.props.deleteReview}
                                     />})}
                                 
                         </div>
