@@ -25,12 +25,63 @@ const ReviewListItem = (props) => {
     //     }
     // }
 
+    const gone = () => {
+        if ( (props.review.rating) === 5) {
+            return (
+                <div>
+                    <i className="fas fa-star" id="rev-stars2" />
+                    <i className="fas fa-star" id="rev-stars2" />
+                    <i className="fas fa-star" id="rev-stars2" />
+                    <i className="fas fa-star" id="rev-stars2" />
+                    <i className="fas fa-star" id="rev-stars2" />
+                </div>
+            )
+        } else if ((props.review.rating) === 4) {
+            return (
+                <div>
+                    <i className="fas fa-star" id="rev-stars2" />
+                    <i className="fas fa-star" id="rev-stars2" />
+                    <i className="fas fa-star" id="rev-stars2" />
+                    <i className="fas fa-star" id="rev-stars2" />
+                </div>
+            )
+        } else if ((props.review.rating) === 3) {
+            return (
+                <div>
+                    <i className="fas fa-star" id="rev-stars2" />
+                    <i className="fas fa-star" id="rev-stars2" />
+                    <i className="fas fa-star" id="rev-stars2" />
+                </div>
+            )
+        } else if ((props.review.rating) === 2) {
+            return ( 
+                <div>
+                    <i className="fas fa-star" id="rev-stars2" />
+                    <i className="fas fa-star" id="rev-stars2" />
+                </div>
+            )
+        } else if ((props.review.rating) === 1) {
+            return (
+                <div>
+                    <i className="fas fa-star" id="rev-stars2" />
+                </div>
+            )
+        } else {
+            <div>
+                "Zero Stars :("
+            </div>
+        }
+    }
+
+   
+
+
 
 
 
     
 
-    return <div className="review-index-box2">
+    return ( <div className="review-index-box2">
         {/* <p>REVIEW LIST ITEM</p> */}
         {/* <img src="https://media0.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif?cid=ecf05e478702021b1b264ee821fb10a59133399882f5f9b9&rid=giphy.gif" alt=""/> */}
         {/* <Footer /> */}
@@ -43,13 +94,15 @@ const ReviewListItem = (props) => {
             <div className="review-name-list">{props.author.username}</div>
             <div className="review-location-list">New York, New York</div>
             
-            <div className="amount-reviews-list">  <i className="fas fa-star" id="rev-stars" /> Reviews </div>
+            <div className="amount-reviews-list">  <i className="fas fa-star" id="rev-stars" /> {props.review.rating.length} Reviews </div>
         </div>
         <div className="review-list-item-right-side">
-            <div className="review-rating-list">{props.review.rating} <i className="fas fa-star" id="rev-stars2" /> <i className="fas fa-star" id="rev-stars2" /> <i className="fas fa-star" id="rev-stars2" /> <i className="fas fa-star" id="rev-stars2" /> <i className="fas fa-star" id="rev-stars2" /></div>
+            {/* <div className="review-rating-list">{props.review.rating} </div> */}
+            <div>{gone()}</div>
             <div className="review-body-list">{props.review.review}</div>
         </div>
     </div>
+    )
 }
 
 export default withRouter(ReviewListItem);

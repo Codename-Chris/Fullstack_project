@@ -43,7 +43,6 @@ class BusinessesIndex extends React.Component {
         }
 
         let businessList = Object.values(this.state.businesses).length === 0 ? this.props.businesses : this.state.businesses;
-        
         return (
             // <div>
             //     <header>
@@ -98,9 +97,10 @@ class BusinessesIndex extends React.Component {
                     <div className="biz-div-box2">
                         <div className="biz-box">
                             <h2 className="biz-results"> All Results</h2>
-                            { businessList.map(business => (
+                            {businessList.map((business) => (
                                 <BusinessIndexItem
                                     business={business}
+                                    reviews={this.props.reviews}
                                     key={business.id}
                                 /> 
                             ))}

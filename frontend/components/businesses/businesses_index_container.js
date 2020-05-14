@@ -7,6 +7,7 @@ const mapStateToProps = (state, ownProps) => {
     return {
         businesses: Object.values(state.entities.businesses),
         find: ownProps.match.params.query || "",
+        reviews: Object.values(state.entities.reviews),
     };
 };
 

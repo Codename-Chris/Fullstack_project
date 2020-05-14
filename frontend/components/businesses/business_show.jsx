@@ -118,6 +118,7 @@ class BusinessShow extends React.Component {
                                     <i className="fas fa-star" id="biz-stars" />
                                     <i className="fas fa-star" id="biz-stars" />
                                     <i className="fas fa-star" id="biz-stars" />
+                                    {this.props.reviews.length} Reviews
                                 </p>
                                 {/* <p> {this.props.business.description} </p> */}
                                 <p className="biz-category">$$ <span className="biz-category-span"> • {this.props.business.category}</span></p>
