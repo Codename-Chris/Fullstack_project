@@ -104,8 +104,8 @@ const ReviewListItem = (props) => {
         </div>
         <div className="review-list-item-right-side">
             {/* <div className="review-rating-list">{props.review.rating} </div> */}
-            <div className="rev-date">{formatDate(props.review.created_at)} </div>
             <div className="rev-gone">{gone()}</div>
+            <div className="rev-date">{formatDate(props.review.created_at)} </div>
             <div className="review-body-list">{props.review.review}</div>
         </div>
     </div>
