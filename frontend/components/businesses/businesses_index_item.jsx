@@ -114,12 +114,12 @@ const BusinessIndexItem = (props) => {
                      }).length} Reviews 
                 </p> */}
                 
-                <p className="biz-category">$$ • {props.business.category}</p>
+                <p className="biz-category">{props.business.price} • {props.business.category}</p>
                 {/* <p> more info </p> */}
             <p className="biz-description"> {props.business.description} </p>
             </div>
             <div className="biz-add-div">
-                <p>({props.business.phone_number}) 767-8438</p>
+                <p>{props.business.phone}</p>
                 <p>{props.business.address}</p>
                 <p className="biz-address">New York, NY</p>
             </div>

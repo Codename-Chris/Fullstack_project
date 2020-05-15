@@ -204,10 +204,10 @@ class BusinessShow extends React.Component {
                 <div className="biz-show-item">
                     {/* <Link className="biz-pic" to={`/businesses/${this.props.business}`}><img className="biz-img-pic" src={this.props.business.photoUrls[0]} /></Link> */}
                    <div className="biz-show-photos">    
-                        <img src={this.props.business.photoUrls[0]}/>
-                        <img src="https://midlandbrewing.com/wp-content/uploads/2018/04/Photo-Coming-Soon.png" />
-                        <img src="https://midlandbrewing.com/wp-content/uploads/2018/04/Photo-Coming-Soon.png" />
-                        <img src="https://midlandbrewing.com/wp-content/uploads/2018/04/Photo-Coming-Soon.png" />
+                        <img src={this.props.business.photoUrls[0]} />
+                        <img src={this.props.business.photoUrls[1]} />
+                        <img src={this.props.business.photoUrls[2]} />
+                        <img src={this.props.business.photoUrls[3]} />
                    </div>
                    <div className="biz-show-info-container">
                         <div className="biz-show-info-inner-container">
@@ -224,7 +224,7 @@ class BusinessShow extends React.Component {
                                     {this.props.reviews.length} Reviews
                                 </p> */}
                                 {/* <p> {this.props.business.description} </p> */}
-                                <p className="biz-category">$$ <span className="biz-category-span"> • {this.props.business.category}</span></p>
+                                <p className="biz-category">{this.props.business.price} <span className="biz-category-span"> • {this.props.business.category}</span></p>
                                 <button type="submit" className="biz-show-but">
                                     <Link to={`/businesses/${this.props.business.id}/reviews`} className="biz-show-search-link">
                                         Write a Review
@@ -238,7 +238,7 @@ class BusinessShow extends React.Component {
                         </div>
                         <div className="biz-show-side-info"> 
                             <p className="biz-website">{this.props.business.website}</p>
-                            <p className="biz-phone-num">({this.props.business.phone_number}) 767-2880</p>
+                            <p className="biz-phone-num">{this.props.business.phone}</p>
                             <p>Open Now!</p>
                         </div>  
                         <div className="biz-show-location-hours">
@@ -264,13 +264,13 @@ class BusinessShow extends React.Component {
                                 <div><p id="week">Sat</p><p>{this.props.business.opening_hours}</p></div>
                                 <div><p id="week">Sun</p><p>{this.props.business.opening_hours}</p></div> */}
 
-                                <div><p id="week">Mon</p><p>12:00am - 12:00pm</p></div>
-                                <div><p id="week">Tue</p><p>12:00am - 12:00pm</p></div>
-                                <div><p id="week">Wed</p><p>12:00am - 12:00pm</p></div>
-                                <div><p id="week">Thu</p><p>12:00am - 12:00pm</p></div>
-                                <div><p id="week">Fri</p><p>12:00am - 12:00pm</p></div>
-                                <div><p id="week">Sat</p><p>12:00am - 12:00pm</p></div>
-                                <div><p id="week">Sun</p><p>12:00am - 12:00pm</p></div>
+                                <div><p id="week">Mon</p><p>{this.props.business.open} - {this.props.business.close}</p></div>
+                                <div><p id="week">Tue</p><p>{this.props.business.open} - {this.props.business.close}</p></div>
+                                <div><p id="week">Wed</p><p>{this.props.business.open} - {this.props.business.close}</p></div>
+                                <div><p id="week">Thu</p><p>{this.props.business.open} - {this.props.business.close}</p></div>
+                                <div><p id="week">Fri</p><p>{this.props.business.open} - {this.props.business.close}</p></div>
+                                <div><p id="week">Sat</p><p>{this.props.business.open} - {this.props.business.close}</p></div>
+                                <div><p id="week">Sun</p><p>{this.props.business.open} - {this.props.business.close}</p></div>
                             </div>
                         </div>
 

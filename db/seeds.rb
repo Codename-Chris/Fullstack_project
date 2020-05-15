@@ -29,7 +29,11 @@ biz1 = Business.create(
     website: "Cronutsrus.com",
     lng: "40.765764",
     lat: "73.977025",
-    description: "Chris' Cronuts has blessed the world with the mythical Cronut, a croissant-doughnut hybrid. What a glorious time to be alive!"
+    description: "Chris' Cronuts has blessed the world with the mythical Cronut, a croissant-doughnut hybrid. What a glorious time to be alive!",
+    price: "$$$",
+    open: "6:00am",
+    close: "6:00pm",
+    phone: "(718) 313-1991"
     )
 
 biz2 = Business.create(
@@ -38,9 +42,13 @@ biz2 = Business.create(
     address: "827 Main Street", 
     phone_number: "718-406-0723", 
     website: "Nyretros.com",
-    lng: "40.765764",
-    lat: "73.977025",
-    description: "Open 24/7 365 days a year, you can always count on Retro's!"
+    lng: "43.165762",
+    lat: "71.077023",
+    description: "Open 24/7 365 days a year, you can always count on Retro's!",
+    price: "$$",
+    open: "12:00am",
+    close: "12:00pm",
+    phone: "(917) 108-5515"
     )
 
 biz3 = Business.create(
@@ -49,9 +57,13 @@ biz3 = Business.create(
     address: "7829 Astoria Blvd", 
     phone_number: "718-897-2390", 
     website: "Grandavepizza.com",
-    lng: "40.765764",
-    lat: "73.977025",
-    description: "When you look up pizza in the dictionary, there should be a picture of this place next to it."
+    lng: "44.165761",
+    lat: "70.177021",
+    description: "When you look up pizza in the dictionary, there should be a picture of this place next to it.",
+    price: "$",
+    open: "10:30am",
+    close: "1:00am",
+    phone: "(718) 728-8879"
     )
 
 biz4 = Business.create(
@@ -60,9 +72,13 @@ biz4 = Business.create(
     address: "808 Sunny Drive", 
     phone_number: "718-515-8971", 
     website: "Brightsidecafe.com",
-    lng: "40.765764",
-    lat: "73.977025",
-    description: "Good coffee, free wi-fi, and free scones on Sunday, this place is a vibe."
+    lng: "41.265764",
+    lat: "72.577029",
+    description: "Good coffee, free wi-fi, and free scones on Sunday, this place is a vibe.",
+    price: "$$$",
+    open: "6:00am",
+    close: "6:00pm",
+    phone: "(917) 732-1248"
     )
 
 biz5 = Business.create(
@@ -71,46 +87,225 @@ biz5 = Business.create(
     address: "444 Northern Blvd", 
     phone_number: "718-220-6683", 
     website: "Gratefulbar.com",
-    lng: "40.765764",
-    lat: "73.977025",
-    description: "Old school bar with new school flair, certainly worth a visit if you're in town."
+    lng: "43.765764",
+    lat: "74.977025",
+    description: "Old school bar with new school flair, certainly worth a visit if you're in town.",
+    price: "$",
+    open: "12:00pm",
+    close: "3:00am",
+    phone: "(718) 215-8972"
+    )
+
+biz6 = Business.create(
+    name: "Jigg's Kitchen", 
+    category: "Resturant", 
+    address: "20 West 34 Street ", 
+    phone_number: "718-220-6683", 
+    website: "JiggyTheTopChef.com",
+    lng: "41.765764",
+    lat: "75.977025",
+    description: "Top chef Jigg brings all of these down home classics to new heights with his arsenal of secret sauces!",
+    price: "$$$",
+    open: "6:00am",
+    close: "6:00pm",
+    phone: "(718) 692-1272"
+    )
+
+biz7 = Business.create(
+    name: "Kev's Quesadilla", 
+    category: "Resturant", 
+    address: "444 7th Ave", 
+    phone_number: "718-220-6683", 
+    website: "KevsQuesadilla.com",
+    lng: "43.765764",
+    lat: "74.977025",
+    description: "Attempt the 'Queso King Challenge' and face off against a 5 pound queso drechenched quesadilla for $100 cash!",
+    price: "$",
+    open: "11:00am",
+    close: "11:00pm",
+    phone: "(718) 416-8972"
+    )
+
+biz8 = Business.create(
+    name: "Sol FN Bar", 
+    category: "Bar", 
+    address: "55 East 9th Ave", 
+    phone_number: "718-220-6683", 
+    website: "SolFNBar.com",
+    lng: "43.565762",
+    lat: "74.577021",
+    description: "Weekly fire preformances and pizza parties for all VIP members!",
+    price: "$$",
+    open: "12:00pm",
+    close: "5:00am",
+    phone: "(917) 215-8972"
+    )
+
+biz9 = Business.create(
+    name: "J's Bakery", 
+    category: "Bakery", 
+    address: "92 Avenues of America", 
+    phone_number: "718-220-6683", 
+    website: "JsBakeryNYC.com",
+    lng: "43.3657643",
+    lat: "74.377023",
+    description: "Featured on 'Best Thing I Ever Ate' for our famous banana bread pudding. We have some other pretty sweet stuff too, come check out for yourself!", 
+    price: "$$$",
+    open: "6:00am",
+    close: "3:00pm",
+    phone: "(718) 831-8073"
+    )
+
+biz10 = Business.create(
+    name: "Quality Bagels", 
+    category: "Bagels", 
+    address: "3 West 8th Ave", 
+    phone_number: "718-220-6683", 
+    website: "NYQaulityBagels.com",
+    lng: "42.265764",
+    lat: "72.277025",
+    description: "Home of the honey boiled bagels, that has taken the world by storm!",
+    price: "$",
+    open: "4:00am",
+    close: "2:00pm",
+    phone: "(917) 933-7077"
     )
 
 
 cronut1 = File.open(Rails.root.join('app', 'assets', 'images', 'cronut1.jpg'))
 biz1.photos.attach(io: cronut1, filename: 'cronut1.jpg')
 
+cronut2 = File.open(Rails.root.join('app', 'assets', 'images', 'cronut2.jpg'))
+biz1.photos.attach(io: cronut2, filename: 'cronut2.jpg')
+
+cronut3 = File.open(Rails.root.join('app', 'assets', 'images', 'cronut3.jpg'))
+biz1.photos.attach(io: cronut3, filename: 'cronut3.jpg')
+
+cronut4 = File.open(Rails.root.join('app', 'assets', 'images', 'cronut4.png'))
+biz1.photos.attach(io: cronut4, filename: 'cronut4.png')
+
+
+
 diner1 = File.open(Rails.root.join('app', 'assets', 'images', 'diner1.jpg'))
 biz2.photos.attach(io: diner1, filename: 'diner1.jpg')
+
+diner2 = File.open(Rails.root.join('app', 'assets', 'images', 'diner2.jpg'))
+biz2.photos.attach(io: diner2, filename: 'diner2.jpg')
+
+diner3 = File.open(Rails.root.join('app', 'assets', 'images', 'diner3.jpg'))
+biz2.photos.attach(io: diner3, filename: 'diner3.jpg')
+
+diner4 = File.open(Rails.root.join('app', 'assets', 'images', 'diner4.jpg'))
+biz2.photos.attach(io: diner4, filename: 'diner4.jpg')
+
+
 
 pizza1 = File.open(Rails.root.join('app', 'assets', 'images', 'pizza1.jpg'))
 biz3.photos.attach(io: pizza1, filename: 'pizza1.jpg')
 
+pizza2 = File.open(Rails.root.join('app', 'assets', 'images', 'pizza2.jpg'))
+biz3.photos.attach(io: pizza2, filename: 'pizza2.jpg')
+
+pizza3 = File.open(Rails.root.join('app', 'assets', 'images', 'pizza3.jpg'))
+biz3.photos.attach(io: pizza3, filename: 'pizza3.jpg')
+
+pizza4 = File.open(Rails.root.join('app', 'assets', 'images', 'pizza4.jpg'))
+biz3.photos.attach(io: pizza4, filename: 'pizza4.jpg')
+
+
+
 cafe1 = File.open(Rails.root.join('app', 'assets', 'images', 'cafe1.jpg'))
 biz4.photos.attach(io: cafe1, filename: 'cafe1.jpg')
+
+cafe2 = File.open(Rails.root.join('app', 'assets', 'images', 'cafe2.jpg'))
+biz4.photos.attach(io: cafe2, filename: 'cafe2.jpg')
+
+cafe3 = File.open(Rails.root.join('app', 'assets', 'images', 'cafe3.jpg'))
+biz4.photos.attach(io: cafe3, filename: 'cafe3.jpg')
+
+cafe4 = File.open(Rails.root.join('app', 'assets', 'images', 'cafe4.jpg'))
+biz4.photos.attach(io: cafe4, filename: 'cafe4.jpg')
+
+
 
 bar1 = File.open(Rails.root.join('app', 'assets', 'images', 'bar1.jpg'))
 biz5.photos.attach(io: bar1, filename: 'bar1.jpg') 
 
+bar2 = File.open(Rails.root.join('app', 'assets', 'images', 'bar2.jpg'))
+biz5.photos.attach(io: bar2, filename: 'bar2.jpg') 
+
+bar3 = File.open(Rails.root.join('app', 'assets', 'images', 'bar3.jpg'))
+biz5.photos.attach(io: bar3, filename: 'bar1.jpg') 
+
+bar4 = File.open(Rails.root.join('app', 'assets', 'images', 'bar4.jpg'))
+biz5.photos.attach(io: bar4, filename: 'bar4.jpg') 
 
 
 
+jigg1 = File.open(Rails.root.join('app', 'assets', 'images', 'jigg1.jpg'))
+biz6.photos.attach(io: jigg1, filename: 'jigg1.jpg') 
+
+jigg2 = File.open(Rails.root.join('app', 'assets', 'images', 'jigg2.png'))
+biz6.photos.attach(io: jigg2, filename: 'jigg2.png') 
+
+jigg3 = File.open(Rails.root.join('app', 'assets', 'images', 'jigg3.jpg'))
+biz6.photos.attach(io: jigg3, filename: 'jigg3.jpg') 
+
+jigg4 = File.open(Rails.root.join('app', 'assets', 'images', 'jigg4.jpg'))
+biz6.photos.attach(io: jigg4, filename: 'jigg4.jpg') 
 
 
 
+kev1 = File.open(Rails.root.join('app', 'assets', 'images', 'kev1.jpg'))
+biz7.photos.attach(io: kev1, filename: 'kev1.jpg') 
+
+kev2 = File.open(Rails.root.join('app', 'assets', 'images', 'kev2.jpg'))
+biz7.photos.attach(io: kev2, filename: 'kev2.jpg') 
+
+kev3 = File.open(Rails.root.join('app', 'assets', 'images', 'kev3.jpg'))
+biz7.photos.attach(io: kev3, filename: 'kev3.jpg') 
+
+kev4 = File.open(Rails.root.join('app', 'assets', 'images', 'kev4.jpg'))
+biz7.photos.attach(io: kev4, filename: 'kev4.jpg') 
 
 
 
+sol1 = File.open(Rails.root.join('app', 'assets', 'images', 'sol1.jpg'))
+biz8.photos.attach(io: sol1, filename: 'sol1.jpg') 
+
+sol2 = File.open(Rails.root.join('app', 'assets', 'images', 'sol2.jpg'))
+biz8.photos.attach(io: sol2, filename: 'sol2.jpg') 
+
+sol3 = File.open(Rails.root.join('app', 'assets', 'images', 'sol3.jpg'))
+biz8.photos.attach(io: sol3, filename: 'sol3.jpg') 
+
+sol4 = File.open(Rails.root.join('app', 'assets', 'images', 'sol4.jpg'))
+biz8.photos.attach(io: sol4, filename: 'sol4.jpg') 
 
 
 
+bakery1 = File.open(Rails.root.join('app', 'assets', 'images', 'bakery1.jpg'))
+biz9.photos.attach(io: bakery1, filename: 'bakery1.jpg') 
+
+bakery2 = File.open(Rails.root.join('app', 'assets', 'images', 'bakery2.jpg'))
+biz9.photos.attach(io: bakery2, filename: 'bakery2.jpg') 
+
+bakery3 = File.open(Rails.root.join('app', 'assets', 'images', 'bakery3.jpg'))
+biz9.photos.attach(io: bakery3, filename: 'bakery3.jpg') 
+
+bakery4 = File.open(Rails.root.join('app', 'assets', 'images', 'bakery4.jpg'))
+biz9.photos.attach(io: bakery4, filename: 'bakery4.jpg') 
 
 
 
+bagel1 = File.open(Rails.root.join('app', 'assets', 'images', 'bagel1.jpg'))
+biz10.photos.attach(io: bagel1, filename: 'bagel1.jpg') 
 
+bagel2 = File.open(Rails.root.join('app', 'assets', 'images', 'bagel2.jpg'))
+biz10.photos.attach(io: bagel2, filename: 'bagel2.jpg') 
 
+bagel3 = File.open(Rails.root.join('app', 'assets', 'images', 'bagel3.jpg'))
+biz10.photos.attach(io: bagel3, filename: 'bagel3.jpg') 
 
-
-
-
-
+bagel4 = File.open(Rails.root.join('app', 'assets', 'images', 'bagel4.jpg'))
+biz10.photos.attach(io: bagel4, filename: 'bagel4.jpg') 
