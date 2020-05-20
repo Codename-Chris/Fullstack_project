@@ -105,7 +105,7 @@ class BusinessShow extends React.Component {
                         <i className="fas fa-star" id="biz-stars" />
                         <i className="fas fa-star" id="biz-stars" />
                         <i className="fas fa-star" id="biz-stars" />
-                        {this.props.reviews.length} Reviews
+                        {/* {this.props.reviews.length} Reviews */}
                     </p>
                 )
             } else if (ratingAvg === 4) {
@@ -115,7 +115,7 @@ class BusinessShow extends React.Component {
                     <i className="fas fa-star" id="biz-stars" />
                     <i className="fas fa-star" id="biz-stars" />
                     <i className="fas fa-star" id="biz-stars" />
-                    {this.props.reviews.length} Reviews
+                    {/* {this.props.reviews.length} Reviews */}
                 </p>
                 )
             } else if (ratingAvg === 3) {
@@ -124,7 +124,7 @@ class BusinessShow extends React.Component {
                         <i className="fas fa-star" id="biz-stars" />
                         <i className="fas fa-star" id="biz-stars" />
                         <i className="fas fa-star" id="biz-stars" />
-                        {this.props.reviews.length} Reviews
+                        {/* {this.props.reviews.length} Reviews */}
                     </p>
                 )
             } else if (ratingAvg === 2) {
@@ -132,21 +132,21 @@ class BusinessShow extends React.Component {
                     <p className="biz-rating">
                         <i className="fas fa-star" id="biz-stars" />
                         <i className="fas fa-star" id="biz-stars" />
-                        {this.props.reviews.length} Reviews
+                        {/* {this.props.reviews.length} Reviews */}
                     </p>
                 )
             } else if (ratingAvg === 1) {
                 return (
                     <p className="biz-rating">
                         <i className="fas fa-star" id="biz-stars" />
-                        {this.props.reviews.length} Reviews
+                        {/* {this.props.reviews.length} Reviews */}
                     </p>
                 )
             } else {
                 return (
                     <p className="biz-rating">
                         <i className="fas fa-star" id="biz-stars" />
-                        {this.props.reviews.length} Reviews
+                        {/* {this.props.reviews.length} Reviews */}
                     </p>
                 )
             }
