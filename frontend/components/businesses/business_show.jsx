@@ -238,7 +238,9 @@ class BusinessShow extends React.Component {
                                 <div className="biz-show-side-info-details">
                                     <p className="biz-phone-num">{this.props.business.phone}</p>
                                 </div>
-                                <p>Open Now!</p>
+                                <div>
+                                    <p>Open Now!</p>
+                                </div>
                             </div>  
                         </div>   
                         <div className="covid-19">
