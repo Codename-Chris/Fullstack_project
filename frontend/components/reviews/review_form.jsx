@@ -71,9 +71,9 @@ class ReviewForm extends React.Component {
                             <div className="rev-inner-box">
                             <div className="rev-form-rating-box">
                             <input type="number" value={this.state.rating} className="rating-thingy" min="1" max="5" onChange={this.update("rating")} />
-                                    <div className='rating-texty'> Select your rating     </div>
+                                    <div className='rating-texty'> Select your rating!    </div>
                             </div>
-                            <textarea className="review-text-body" id="" cols="30" rows="10" value={this.state.review} placeholder="Your review helps others learn about great local businesses! Please don't review this business if you recieved a freebie for writing this review, or if you're connected in any way to the owner or employees." onChange={this.update("review")}></textarea>
+                            <textarea className="review-text-body" id="" cols="30" rows="10"  value={this.state.review} placeholder="Your review helps others learn about great local businesses! Please don't review this business if you recieved a freebie for writing this review, or if you're connected in any way to the owner or employees." onChange={this.update("review")}></textarea>
                             {/* <div>
                                 <div>
                                 <i className="fas fa-star" id="biz-stars-unrev" />

@@ -171,6 +171,81 @@ biz10 = Business.create(
     phone: "(917) 933-7077"
     )
 
+biz11 = Business.create(
+    name: "Quality Bagels", 
+    category: "Bagels", 
+    address: "3 West 8th Ave", 
+    phone_number: "718-220-6683", 
+    website: "NYQaulityBagels.com",
+    lng: "42.265764",
+    lat: "72.277025",
+    description: "Home of the honey boiled bagels, that has taken the world by storm!",
+    price: "$",
+    open: "4:00am",
+    close: "2:00pm",
+    phone: "(718) 392-6162"
+    )
+
+biz12 = Business.create(
+    name: "Quality Bagels", 
+    category: "Bagels", 
+    address: "3 West 8th Ave", 
+    phone_number: "718-220-6683", 
+    website: "NYQaulityBagels.com",
+    lng: "42.265764",
+    lat: "72.277025",
+    description: "Home of the honey boiled bagels, that has taken the world by storm!",
+    price: "$",
+    open: "4:00am",
+    close: "2:00pm",
+    phone: "(917) 761-2222"
+    )
+
+biz13 = Business.create(
+    name: "Quality Bagels", 
+    category: "Bagels", 
+    address: "3 West 8th Ave", 
+    phone_number: "718-220-6683", 
+    website: "NYQaulityBagels.com",
+    lng: "42.265764",
+    lat: "72.277025",
+    description: "Home of the honey boiled bagels, that has taken the world by storm!",
+    price: "$",
+    open: "4:00am",
+    close: "2:00pm",
+    phone: "(718) 933-7077"
+    )
+
+biz14 = Business.create(
+    name: "Quality Bagels", 
+    category: "Bagels", 
+    address: "3 West 8th Ave", 
+    phone_number: "718-220-6683", 
+    website: "NYQaulityBagels.com",
+    lng: "42.265764",
+    lat: "72.277025",
+    description: "Home of the honey boiled bagels, that has taken the world by storm!",
+    price: "$",
+    open: "4:00am",
+    close: "2:00pm",
+    phone: "(917) 598-7582"
+    )
+
+biz15 = Business.create(
+    name: "Quality Bagels", 
+    category: "Bagels", 
+    address: "3 West 8th Ave", 
+    phone_number: "718-220-6683", 
+    website: "NYQaulityBagels.com",
+    lng: "42.265764",
+    lat: "72.277025",
+    description: "Home of the honey boiled bagels, that has taken the world by storm!",
+    price: "$",
+    open: "4:00am",
+    close: "2:00pm",
+    phone: "(718) 153-1174"
+    )
+
 
 cronut1 = File.open(Rails.root.join('app', 'assets', 'images', 'cronut1.jpg'))
 biz1.photos.attach(io: cronut1, filename: 'cronut1.jpg')

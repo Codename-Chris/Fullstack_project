@@ -21,7 +21,7 @@ const BusinessIndexItem = (props) => {
             return a + b;
 
         });
-        console.log(totalRatings)
+        // console.log(totalRatings)
     }
 
     const ratingAvg = Math.round((totalRatings / props.reviews.filter(review => {
@@ -37,9 +37,9 @@ const BusinessIndexItem = (props) => {
                     <i className="fas fa-star" id="biz-stars" />
                     <i className="fas fa-star" id="biz-stars" />
                     <i className="fas fa-star" id="biz-stars" />
-                    {props.reviews.filter(review => {
+                    {/* {props.reviews.filter(review => {
                          return ( review.business_id === props.business.id)
-                     }).length} Reviews 
+                     }).length} Reviews  */}
                 </p>
             )
         } else if (ratingAvg === 4) {
@@ -49,9 +49,9 @@ const BusinessIndexItem = (props) => {
                     <i className="fas fa-star" id="biz-stars" />
                     <i className="fas fa-star" id="biz-stars" />
                     <i className="fas fa-star" id="biz-stars" />
-                    {props.reviews.filter(review => {
+                    {/* {props.reviews.filter(review => {
                          return ( review.business_id === props.business.id)
-                     }).length} Reviews 
+                     }).length} Reviews  */}
                 </p>
             )
         } else if (ratingAvg === 3) {
@@ -60,9 +60,9 @@ const BusinessIndexItem = (props) => {
                     <i className="fas fa-star" id="biz-stars" />
                     <i className="fas fa-star" id="biz-stars" />
                     <i className="fas fa-star" id="biz-stars" />
-                    {props.reviews.filter(review => {
+                    {/* {props.reviews.filter(review => {
                          return ( review.business_id === props.business.id)
-                     }).length} Reviews 
+                     }).length} Reviews  */}
                 </p>
             )
         } else if (ratingAvg === 2) {
@@ -70,27 +70,27 @@ const BusinessIndexItem = (props) => {
                 <p className="biz-rating">
                     <i className="fas fa-star" id="biz-stars" />
                     <i className="fas fa-star" id="biz-stars" />
-                    {props.reviews.filter(review => {
+                    {/* {props.reviews.filter(review => {
                          return ( review.business_id === props.business.id)
-                     }).length} Reviews 
+                     }).length} Reviews  */}
                 </p>
             )
         } else if (ratingAvg === 1) {
             return (
                 <p className="biz-rating">
                     <i className="fas fa-star" id="biz-stars" />
-                    {props.reviews.filter(review => {
+                    {/* {props.reviews.filter(review => {
                         return (review.business_id === props.business.id)
-                    }).length} Reviews 
+                    }).length} Reviews  */}
                 </p>
             )
         } else {
             return (
                 <p className="biz-rating">
                     <i className="fas fa-star" id="biz-stars" />
-                    {props.reviews.filter(review => {
+                    {/* {props.reviews.filter(review => {
                         return (review.business_id === props.business.id)
-                    }).length} Reviews 
+                    }).length} Reviews  */}
                 </p>
             )
         }

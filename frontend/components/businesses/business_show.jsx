@@ -91,7 +91,7 @@ class BusinessShow extends React.Component {
                 return a + b;
 
             });
-            console.log(totalRatings)
+            // console.log(totalRatings)
         }
 
         const ratingAvg = Math.round((totalRatings/this.props.reviews.length))
@@ -231,16 +231,21 @@ class BusinessShow extends React.Component {
                                     </Link>
                                 </button>
                             </div> 
+                            <div className="biz-show-side-info">
+                                <div className="biz-show-side-info-details">
+                                    <p className="biz-website">{this.props.business.website}</p>
+                                </div>
+                                <div className="biz-show-side-info-details">
+                                    <p className="biz-phone-num">{this.props.business.phone}</p>
+                                </div>
+                                <p>Open Now!</p>
+                            </div>  
                         </div>   
                         <div className="covid-19">
                             <p className="covid-19-p1">COVID-19 Advisory: <span className="covid-19-biz">Business operations may be affected</span></p>
                             <p>Due to ongoing precautionary measures, please contact the business directly for updated hours and availability.</p>
                         </div>
-                        <div className="biz-show-side-info"> 
-                            <p className="biz-website">{this.props.business.website}</p>
-                            <p className="biz-phone-num">{this.props.business.phone}</p>
-                            <p>Open Now!</p>
-                        </div>  
+                       
                         <div className="biz-show-location-hours">
                             Location {`&`} Hours
                         </div>
@@ -309,8 +314,6 @@ class BusinessShow extends React.Component {
                                     />})}
                                 
                         </div>
-                        {/* <img src="https://media2.giphy.com/media/26gssvmflfcT0bmTe/giphy.gif?cid=ecf05e47d834345a3af1baa8599b229e72214f7e452b2879&rid=giphy.gif" alt=""/>
-                        <img src="https://media.giphy.com/media/26gsaKErbuJAD2L4I/giphy.gif" id="img"/> */}
                     </div>
                 </div>
             </div>

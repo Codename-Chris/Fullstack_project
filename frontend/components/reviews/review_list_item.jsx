@@ -81,7 +81,7 @@ const ReviewListItem = (props) => {
 
 
 
-    console.log(props.author)
+    // console.log(props.author)
 
     return ( <div className="review-index-box2">
         {/* <p>REVIEW LIST ITEM</p> */}
