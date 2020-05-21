@@ -6,7 +6,7 @@ import { formatDate } from '../../util/date_util';
 
 
 const ReviewListItem = (props) => {
-    // debugger
+    debugger
 
     // const profPic = () => {
     //     // debugger
@@ -26,7 +26,7 @@ const ReviewListItem = (props) => {
         } 
     }
 
-    const gone = () => {
+    const stars = () => {
     
         if ( (props.review.rating) === 5) {
             return (
@@ -98,13 +98,13 @@ const ReviewListItem = (props) => {
             <div className="review-friends-list">
                 <i className="fas fa-female" id="rev-friends" /> 
                 <i className="fas fa-male" id="rev-friends" />
-                   {props.review.rating.length} friends
+                0 friends
             </div>
-            <div className="amount-reviews-list">  <i className="fas fa-star" id="rev-stars" /> {props.review.rating.length} reviews </div>
+            <div className="amount-reviews-list">  <i className="fas fa-star" id="rev-stars" /> {props.author.reviewIds} reviews </div>
         </div>
         <div className="review-list-item-right-side">
             {/* <div className="review-rating-list">{props.review.rating} </div> */}
-            <div className="rev-gone">{gone()}</div>
+            <div className="rev-gone">{stars()}</div>
             <div className="rev-date">{formatDate(props.review.created_at)} </div>
             <div className="review-body-list">{props.review.review}</div>
         </div>
