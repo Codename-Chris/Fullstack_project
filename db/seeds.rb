@@ -172,11 +172,11 @@ biz10 = Business.create(
     )
 
 biz11 = Business.create(
-    name: "Peppy Ann's Pizza", 
+    name: "Peppy Pizza", 
     category: "Pizza", 
     address: "4 West 5th Ave", 
     phone_number: "718-220-6683", 
-    website: "Peppyannpizza.com",
+    website: "Peppypizza.com",
     lng: "42.265764",
     lat: "72.277025",
     description: "It ain't easy being this cheesy!",
