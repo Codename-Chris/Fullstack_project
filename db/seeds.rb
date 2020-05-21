@@ -183,7 +183,7 @@ biz11 = Business.create(
     price: "$$",
     open: "10:00am",
     close: "10:00pm",
-    phone: "(718) 392-6162"
+    phone: "(718) 692-6162"
     )
 
 biz12 = Business.create(
