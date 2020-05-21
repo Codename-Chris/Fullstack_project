@@ -6,7 +6,22 @@ import BusinessShow from './business_show'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        business: state.entities.businesses[ownProps.match.params.businessId],
+        business: state.entities.businesses[ownProps.match.params.businessId] || 
+        {
+            name: "",
+            category: "",
+            address: "",
+            phone_number: "",
+            website: "",
+            lng: "",
+            lat: "",
+            description: "",
+            price: "",
+            open: "",
+            close: "",
+            phone: "",
+            photoUrls: [],
+        },
         reviews: Object.values(state.entities.reviews),
         users: state.entities.users,
         user_id: state.session.id

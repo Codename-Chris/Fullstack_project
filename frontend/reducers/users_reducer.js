@@ -14,7 +14,7 @@ const UsersReducer = (state = {}, action) => {
             
             newState = merge({}, state, action.users)
             // Object.keys(action.users).forEach(userId => newState[userId] = action.users[usersId])
-            debugger
+            // debugger
             return newState;
             
         case RECEIVE_BUSINESS:
