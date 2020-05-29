@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const BusinessIndexItem = (props) => {
-    // debugger
-
     const ratings = props.reviews.filter(review => {
         return (review.business_id === props.business.id)
     }).map(rev => {
@@ -115,7 +113,6 @@ const BusinessIndexItem = (props) => {
                                 return ( review.business_id === props.business.id)
                             }).length} Reviews 
                         </p> */}
-                        
                         <p className="biz-category">{props.business.price} • {props.business.category}</p>
                         {/* <p> more info </p> */}
                     <p className="biz-description"> {props.business.description} </p>
