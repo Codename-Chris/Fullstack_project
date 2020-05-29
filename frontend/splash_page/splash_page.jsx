@@ -109,7 +109,7 @@ class SplashPage extends React.Component {
                             className="splash-input-2"
                         />
                     </label>
-                    <button type="submit" className="splash-but"><Link to={searchy}><i className="fas fa-search" id="search-img"></i></Link></button>
+                    <Link className="splash-button-link" to={searchy}><button type="submit" className="splash-but"><i className="fas fa-search" id="search-img"></i></button></Link>
                 </form>
                 <div className="splash-sub-links">
                     <a href="https://github.com/Codename-Chris" className="splash-sub-a"><i className="fab fa-github"></i> Github</a>

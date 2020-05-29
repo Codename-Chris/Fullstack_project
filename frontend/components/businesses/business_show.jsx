@@ -194,12 +194,11 @@ class BusinessShow extends React.Component {
                                     />
                                     {/* </label> */}
                                 </div>
-                                <button type="submit" className="biz-but">
-                                    <Link to={searchy} className="biz-search-link">
+                                <Link className="splash-button-link" to={searchy}>
+                                    <button type="submit" className="splash-but">
                                         <i className="fas fa-search" id="search-img"></i>
-                                    </Link>
-                                </button>
-
+                                    </button>
+                                </Link>
                             </form>
                         </div>
                     </div>
@@ -285,7 +284,6 @@ class BusinessShow extends React.Component {
                             </div>
                         </div>
 
-                    </div>
                     <div className="biz-show-rec-rev">
                         <p className="rec-rev-p">Recommended Reviews</p>
                     </div>
@@ -320,6 +318,7 @@ class BusinessShow extends React.Component {
                                     />})}
                                 
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

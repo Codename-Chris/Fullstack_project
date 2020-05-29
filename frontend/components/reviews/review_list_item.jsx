@@ -6,7 +6,7 @@ import { formatDate } from '../../util/date_util';
 
 
 const ReviewListItem = (props) => {
-    debugger
+    
 
     // const profPic = () => {
     //    

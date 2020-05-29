@@ -82,11 +82,11 @@ class BusinessesIndex extends React.Component {
                                         />
                                     {/* </label> */}
                                 </div>
-                                <button type="submit" className="biz-but">
-                                    <Link to={searchy} className="biz-search-link">
+                                <Link className="splash-button-link" to={searchy}>
+                                    <button type="submit" className="splash-but">
                                         <i className="fas fa-search" id="search-img"></i>
-                                    </Link>
-                                </button>
+                                    </button>
+                                </Link>
                                 
                             </form>
                         </div>
