@@ -42,7 +42,6 @@ bar1 = File.open(Rails.root.join('app', 'assets', 'images', 'bar1.jpg'))
 biz5.photos.attach(io: bar1, filename: 'bar1.jpg')
 ```
 ## Future Features 
-* Business Index
-* Filtered Searches
-* GeoLocation
-* Creating/Editing Reviews
+* User Profiles
+* Map Markers for Google Maps API
+
