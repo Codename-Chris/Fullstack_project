@@ -217,6 +217,7 @@
 
 .biz-description {
     width: 400px;
+    color: black;
 }
 
 .biz-category {
@@ -329,6 +330,10 @@
     margin-left: 15px;
     display: flex;
     padding-bottom: 15px;
+}
+
+.biz-index-item-link {
+    text-decoration: none;
 }
 
 .biz-show-photos{
