@@ -47,15 +47,8 @@ class BusinessesIndex extends React.Component {
             resulty = "Best resturants near New York"
         }
        
-
         let businessList = Object.values(this.state.businesses).length === 0 ? this.props.businesses : this.state.businesses;
         return (
-            // <div>
-            //     <header>
-            //         <Link to="/" className="header-link"><h1>Celp <img src="https://s3-media0.fl.yelpcdn.com/assets/srv0/yelp_styleguide/dcb526e86d86/assets/img/logos/burst_desktop_xsmall_outline@2x.png" className="header-logo" /></h1></Link>
-            //     </header>
-            //     <h3>This will be the Businesses Index Page!</h3>
-            // </div>
             <>
                 <header className="biz-index-header">
                     <div className="index-head">
