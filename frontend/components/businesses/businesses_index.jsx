@@ -43,6 +43,9 @@ class BusinessesIndex extends React.Component {
         }
 
         let resulty = `${this.state.businesses.length} results for ${this.state.find}, try these resturants! `
+        if (this.state.find === "") {
+            resulty = "Best resturants near New York"
+        }
        
 
         let businessList = Object.values(this.state.businesses).length === 0 ? this.props.businesses : this.state.businesses;
