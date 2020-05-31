@@ -24,7 +24,6 @@ class BusinessesIndex extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        // this.props.? (this.state)
     };
     
     componentDidMount() {
@@ -40,8 +39,11 @@ class BusinessesIndex extends React.Component {
         // debugger
         let searchy = `/businesses/search/${this.state.find}`;
         if (this.state.find === "") {
-            searchy = `/businesses/`
+            searchy = `/businesses/search/${this.state.find}`
         }
+
+        let resulty = `${this.state.businesses.length} results for ${this.state.find}, try these resturants! `
+       
 
         let businessList = Object.values(this.state.businesses).length === 0 ? this.props.businesses : this.state.businesses;
         return (
@@ -94,7 +96,7 @@ class BusinessesIndex extends React.Component {
                 </header>
 
                 <div className="biz-div-box1">
-                    <h1 className="biz-h1"> Best Businesses near New York </h1>
+                    <h1 className="biz-h1"> {resulty}</h1>
                     <div className="biz-div-box2">
                         <div className="biz-box">
                             <h2 className="biz-results"> All Results</h2>
@@ -107,9 +109,6 @@ class BusinessesIndex extends React.Component {
                             ))}
                         </div>
                         <div className="biz-map">
-                            {/* <img src="https://www.legalgenealogist.com/wordpress/wp-content/uploads/2019/09/GMaps.jpg" className="biz-img-map"/>
-                            <img src="https://www.legalgenealogist.com/wordpress/wp-content/uploads/2019/09/GMaps.jpg" className="biz-img-map" />
-                            <img src="https://www.legalgenealogist.com/wordpress/wp-content/uploads/2019/09/GMaps.jpg" className="biz-img-map" /> */}
                             <BusinessMap />
                         </div>
                     </div>
