@@ -17,6 +17,6 @@ class Api::BusinessesController < ApplicationController
     private 
 
     def selected_business
-        Business.find(params[:id])
+        Business.with_attached_photos.find(params[:id])
     end  
 end
