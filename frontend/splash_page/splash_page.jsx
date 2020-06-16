@@ -115,7 +115,7 @@ class SplashPage extends React.Component {
                     <a href="https://github.com/Codename-Chris" className="splash-sub-a"><i className="fab fa-github"></i> Github</a>
                     <a href="https://www.linkedin.com/in/christopher-garthright/" className="splash-sub-a"><i className="fab fa-linkedin"></i> LinkedIn</a>
                     <a href="https://angel.co/christopher-garthright" className="splash-sub-a"><i className="fab fa-angellist"></i> AngelList</a>
-                    {/* <a href='#/search' className="splash-sub-a">Delivery</a> */}
+                    
                 </div>
                 <div className="splash-img-cred">
                     <div className="cred-link">
